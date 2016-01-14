@@ -1,0 +1,204 @@
+@import "base";
+html,
+button,
+input,
+select,
+textarea {
+    color: $text-color;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Base Styles */
+html{
+    height:100%;
+    line-height: 1;
+}
+
+.page{//body style
+    min-height:100%;
+    line-height: 1;
+    font-family: $font-regular, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    color: $text-color;
+}
+
+.page__content{
+    @include font-size($project-font-size);
+    line-height:strip-units($project-line-height/$project-font-size);
+}
+
+/* Typography*/
+h1, h2, h3, h4, h5, h6, .g-title, g-subtitle{
+  margin-top: 0;
+  margin-bottom:30px;
+  line-height:1.1;
+  color:$title-color;
+  font-weight:normal;
+  font-family:$font-light;
+}
+.g-title{
+    display:block;
+    @include font-size(22px);
+}
+
+.g-subtitle{
+    display:block;
+    @include font-size(16px);
+}
+
+.g-brand-color{
+    color:$primary;
+}
+
+b, strong{
+    font-family:$font-medium;
+}
+i, em{
+    font-style:normal;
+    font-weight:normal;
+    font-family:$font-italic;
+}
+
+/* Links */
+a {
+  color: $primary; }
+
+
+/* Lists */
+ul {
+    list-style: disc outside; }
+ol {
+    list-style: decimal outside; }
+ol, ul {
+    margin-top: 0; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    @include px2rem(margin, $project-line-height/2 0 $project-line-height/2 30px);
+}
+
+.g-clearlist{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+/* Blockquote */
+blockquote{
+    font-size:120%;
+    line-height:1.6;
+    font-style: normal;
+    @include px2rem(padding, 0 0 0 30px);
+    border-left:2px solid $primary;
+    font-family:$font-italic;
+}
+cite{
+    display:block;
+    font-size:75%;
+    font-family:$font-regular;
+}
+
+
+/* Spacing */
+p {
+  margin-top: 0; }
+
+button,
+.g-btn {
+    @include px2rem(margin-bottom, $project-line-height);
+}
+input,
+textarea,
+select,
+fieldset {
+    @include px2rem(margin-bottom, $project-line-height);
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol{
+    @include px2rem(margin-bottom, $project-line-height);
+}
+
+/* Misc */
+hr {
+    @include px2rem(margin, $project-line-height 0);
+    border-width: 0;
+    border-top: 1px solid $border-color;
+}
+
+/* Transitions */
+a, button, input[type="button"], input[type="submit"],
+#{$all-text-inputs}, select{
+    @include transition-property(border-color,color,background-color);
+    @include transition-duration(.15s);
+    @include transition-timing-function(ease-in);
+}
+
+
+/*Helper classes*/
+.g-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.g-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.g-invisible {
+    visibility: hidden;
+}
+
+.g-clearfix{
+    @include clearfix; //bourbon clearfix
+}
+.lt-ie9{
+    .g-clearfix{
+        @include clear-fix();
+    }
+}

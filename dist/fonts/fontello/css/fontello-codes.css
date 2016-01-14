@@ -1,0 +1,12 @@
+
+.icon-up-open-mini:before { content: '\e800'; } /* '' */
+.icon-down-open-mini:before { content: '\e801'; } /* '' */
+.icon-cancel:before { content: '\e802'; } /* '' */
+.icon-ok:before { content: '\e803'; } /* '' */
+.icon-file-pdf:before { content: '\e804'; } /* '' */
+.icon-right-open-big:before { content: '\e806'; } /* '' */
+.icon-left-open-big:before { content: '\e807'; } /* '' */
+.icon-down-open-big:before { content: '\e808'; } /* '' */
+.icon-up-open-big:before { content: '\e809'; } /* '' */
+.icon-menu:before { content: '\e80e'; } /* '' */
+.icon-copyright:before { content: '\e815'; } /* '' */
