@@ -1,0 +1,79 @@
+﻿@import "../../modules/_base.scss";
+/*Header Contacts List*/
+.b-header__contacts{
+    background:$primary-dark;
+    color:#fff;
+}
+.h-contact{
+    @extend .g-clearlist;
+    font-size:1px;
+    line-height:0;
+    text-align:justify;
+    text-align-last:justify;
+
+    &:after{
+        content:'';
+        width:100%;
+        height:0;
+        visibility:hidden;
+        overflow:hidden;
+        display:inline-block;
+    }
+}
+.h-contact__item{
+    text-align:center;
+    text-align-last:center;
+    line-height:normal;
+    @include font-size(10px);
+    vertical-align:top;
+    white-space:nowrap;
+    display:none;
+}
+
+.h-contact__item--common{
+    display:inline-block;
+    width:100%;
+}
+
+.h-contact__text,
+.h-contact__phone{
+    display:inline-block;
+    @include px2rem(padding, 10px 0);
+    vertical-align:top;
+    text-transform:uppercase;
+}
+
+.h-contact__phone{
+    margin-left:10px;
+    color:inherit;
+    text-decoration:none;
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+}
+
+@include media($desktop){
+    .b-header__contacts{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1000;
+    }
+    .h-contact__item{
+        display:inline-block;
+        @include font-size(11px);
+    }
+    .h-contact__item--common{
+        width:auto;
+    }
+}
+
+@include media($large){
+    .h-contact__item{
+        @include font-size(13px);
+    }
+}
+
+

@@ -1,4 +1,91 @@
 @import "../modules/base";
-
-@import "header/_logo.scss";
 /*Site Header*/
+.b-header{}
+
+.b-header__menu{
+    position:fixed;
+    @include px2rem(top, 32px);//высота блока контактов
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:#f6f6f6;
+    border-bottom:1px solid $border-color;
+    box-shadow:0 1px 3px rgba(#000, .4);
+    display:none;
+}
+
+
+.b-header__main{
+    padding:10px 0;
+}
+
+@include media($desktop){//блок контактов и меню - position fixed
+    .b-header__main{
+        @include px2rem(padding, 105px 0 12px); //93px + 12px
+    }
+    .b-header__menu{
+        display:block;
+    }
+}
+
+@include media($large){
+    .b-header__main{
+        @include px2rem(padding, 108px 0 12px); //96px + 12px
+    }
+    .b-header__menu{
+        @include px2rem(top, 35px); //увеличили шрифт в контактах
+    }
+}
+
+@import "header/_contacts.scss";
+@import "header/_logo.scss";
+@import "header/_services.scss";
+
+
+
+/*Header Action Buttons*/
+.b-header__btn{
+    display:inline-block;
+    vertical-align:middle;
+    @include px2rem(height, 37px);
+    @include px2rem(line-height, 37px);
+    width:42px;
+    padding:0;
+    margin:10px 0 0 10px;
+    border:none;
+    border-radius:$border-radius;
+    text-align:center;
+    float:right;
+    color:#fff;
+    @include font-size(24px);
+    background:$primary-dark;
+
+    &:hover,
+    &:focus{
+        background:lighten($primary-dark, 15%);
+        outline:0;
+    }
+
+    @include media($tablet){
+        margin-top:29px;
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}
+
+.b-header__btn--alt{
+    background:#e30613;
+
+    &:hover,
+    &:focus{
+        background:darken(#e30613, 10%);
+    }
+
+    @include media($tablet){
+        display:none;
+    }
+}
+
+

@@ -62,36 +62,3 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
 
-
-
-
-/*form notices*/
-.g-notice{
-    @include px2rem(padding, 16px 20px);
-    @include px2rem(margin, $project-line-height/2 0);
-    border:1px solid $primary;
-    border-radius:$border-radius;
-    text-align:center;
-    position:relative;
-    display:none;
-
-    p{
-        @include px2rem(margin, $project-line-height/2 0);
-    }
-}
-.g-notice__close{
-    position:absolute;
-    top:5px;
-    right:5px;
-    text-decoration:none;
-    cursor:pointer;
-}
-
-.g-notice--bad{
-    color:red;
-    border-color:red;
-
-    .g-notice__close{
-        color:red;
-    }
-}

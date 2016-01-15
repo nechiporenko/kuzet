@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*Header Main Services List*/
+.h-service{
+    @extend .g-clearlist;
+    margin-top:29px;
+    float:right;
+    font-size:0;
+    display:none;
+
+    @include media($tablet){
+        display:block;
+    }
+}
+.h-service__item{
+    display:inline-block;
+    @include font-size(13px);
+    vertical-align:middle;
+}
+.h-service__link{
+    display:none;
+    @include px2rem(padding, 12px 10px);
+    color:$text-color;
+    text-transform:uppercase;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:#e30613;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+
+    @include media($large){
+        @include px2rem(padding, 12px 30px);
+    }
+}
+.h-service__btn{
+    @extend .g-btn;
+    height:37px;
+    line-height:37px;
+    padding:0 12px;
+    margin:0 0 0 10px;
+    border-radius:19px;
+    background:#e30613;
+    @include font-size(13px);
+    text-transform:uppercase;
+
+    &:hover,
+    &:focus{
+        background:darken(#e30613, 10%);
+    }
+}

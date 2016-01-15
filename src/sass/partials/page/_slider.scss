@@ -1,2 +1,24 @@
 ﻿@import "../../modules/_base.scss";
-/*Slider*/
+/*Home Page Slider*/
+.b-slider{
+    @extend .g-clearlist;
+}
+
+.b-slider__item{}
+.b-slider__thumb{
+    margin:0;
+    position:relative;
+    &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0;left:0;
+        width:100%;
+        height:100%;
+        background:rgba(#000, .1);
+    }
+}
+
+.b-slider__img{
+    @extend .g-full-width;
+}

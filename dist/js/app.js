@@ -37,10 +37,8 @@
 
 // Десктоп меню (выпадайки)
 // Мобильное меню
-// Сообщения об отправке формы
 // Кнопка скролла страницы
 // Модальное окно
-// Если браузер не знает о svg-картинках
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -56,7 +54,9 @@ jQuery(document).ready(function ($) {
     // Десктоп меню (выпадайки)
     //---------------------------------------------------------------------------------------
     var initDesktopMenu = (function () {
-        $('.js-menu li').on({
+        var $menu = $('.js-menu');
+        $menu.children('li').has('ul').children('a').addClass('has-menu').append('<i class="icon-down-open-mini"></i>');
+        $menu.find('li').on({
             mouseenter: function () {
                 $(this).find('ul:first').stop(true, true).fadeIn('fast');
                 $(this).find('a:first').addClass('hover');
@@ -75,19 +75,7 @@ jQuery(document).ready(function ($) {
         //...
     })();
 
-    //
-    // Сообщения об отправке формы
-    //---------------------------------------------------------------------------------------
-    // после аякс-отправки формы ($form), если все ок - $form.find('.g-notice--ok').fadeIn();
-    // если вернуло ошибку - $form.find('.g-notice--bad').fadeIn();
-    var showFormNotice = (function () {
-        var $notice = $('.js-notice');
-        $notice.append('<a class="g-notice__close"><i class="icon-cancel"></i></a>'); //иконка закрытия
-        $notice.on('click', '.g-notice__close', function (e) {//закроем блок по клику на иконку
-            e.preventDefault();
-            $(this).parent('div').fadeOut();
-        });
-    }());
+    
 
     //
     // Кнопка скролла страницы
@@ -168,14 +156,20 @@ jQuery(document).ready(function ($) {
     });
 
     //
-    // Если браузер не знает о svg-картинках
+    // Слайдер на главной
     //---------------------------------------------------------------------------------------
-    if (!Modernizr.svg) {
-        $('img[src*="svg"]').attr('src', function () {
-            return $(this).attr('src').replace('.svg', '.png');
+    function initMainSlider() {
+        var $slider = $('.js-slider');
+        $slider.bxSlider({
+            auto: true,
+            pager: false,
+            mode: 'fade',
+            pause: 8000,
+            autoHover: true
         });
     }
-    
+    if($('.js-slider').length){initMainSlider()}
+
     //
     // Если браузер не знает о плейсхолдерах в формах
     //---------------------------------------------------------------------------------------

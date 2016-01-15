@@ -1,4 +1,23 @@
 ﻿@import "../../modules/_base.scss";
-
 /*Site Logo*/
+.b-header__logo{
+    float:left;
+    height:rem(56px);
+    width:rem(48px);
+    @include hide-text();
+    background-image:url(../img/logo-xs.png);
+    background-repeat:no-repeat;
+    background-size:cover;
 
+    @include media($tablet){
+        @include px2rem(width, 216px);
+        @include px2rem(height, 95px);
+        background-image:url(../img/logo.png);
+        background-size:unset;
+
+        @include hidpi(1.5){
+            background-image:url(../img/logo2x.png);
+            background-size:cover;
+        }
+    }
+}

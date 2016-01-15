@@ -7,7 +7,7 @@ $loader:   '../img/loader.gif';
 //layout
 .bx-wrapper {
 	position: relative;
-    margin:0 auto 2*$project-line-height;
+    margin:0 auto $project-line-height;
 	padding: 0;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
