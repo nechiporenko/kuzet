@@ -54,7 +54,7 @@ html{
 
 /* Typography*/
 .page__content{
-    min-height:500px;
+    min-height:480px;
     @include font-size($project-font-size);
     line-height:strip-units($project-line-height/$project-font-size);
 }

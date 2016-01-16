@@ -1,0 +1,35 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Menu*/
+.f-menu{
+    @extend .g-clearlist;
+}
+.f-menu__item{
+    display:block;
+    text-align:center;
+}
+
+@include media($tablet){
+    .f-menu{
+        font-size:1px;
+        line-height:0;
+        text-align:justify;
+        text-align-last:justify;
+
+        &:after{
+            content:'';
+            width:100%;
+            height:0;
+            visibility:hidden;
+            overflow:hidden;
+            display:inline-block;
+        }
+    }
+    .f-menu__item{
+        display:inline-block;
+        text-align:left;
+        text-align-last:left;
+        line-height:normal;
+        @include font-size(14px);
+        vertical-align:top;
+    }
+}

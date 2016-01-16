@@ -1,3 +1,69 @@
 @import "../modules/base";
-
 /*Site Footer*/
+.b-footer{
+    border-top:1px solid $border-color;
+    box-shadow:0 -1px 4px rgba(#000,.3);
+}
+
+.b-footer__main{
+    padding:33px 0 0;
+    background:#f6f6f6;
+}
+
+.b-footer__contact{
+    @include font-size(14px);
+    font-family:$font-light;
+    text-align:center;
+
+    @include media($desktop){
+        margin-left:120px;
+        text-align:left;
+    }
+
+    @include media($large){
+        margin-left:180px;
+    }
+}
+
+.b-footer__title,
+.b-footer__subtitle{
+    display:block;
+    color:$primary;
+    text-transform:uppercase;
+}
+.b-footer__title{
+    margin-bottom:24px;
+    @include font-size(16px);
+    font-family:$font-regular;
+    color:$primary;
+    text-transform:uppercase;
+}
+.b-footer__subtitle{
+    display:block;
+    margin-bottom:16px;
+    @include font-size(14px);
+}
+
+.f-contact{
+    list-style-type:none;
+    padding:0;
+}
+.f-contact__item{
+    display:block;
+    line-height:1.4;
+}
+.f-contact__link{
+    color:$text-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
+
+.b-footer__menu{
+    padding:24px 0;
+    background:$primary-dark;
+    color:#fff;
+}
