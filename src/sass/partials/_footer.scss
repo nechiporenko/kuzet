@@ -2,7 +2,7 @@
 /*Site Footer*/
 .b-footer{
     border-top:1px solid $border-color;
-    box-shadow:0 -1px 4px rgba(#000,.3);
+    box-shadow:0 -1px 3px rgba(#000,.2);
 }
 
 .b-footer__main{
@@ -63,7 +63,18 @@
 }
 
 .b-footer__menu{
-    padding:24px 0;
+    padding:17px 0;
     background:$primary-dark;
     color:#fff;
+}
+
+.b-footer__sole{
+    padding:6px 0;
+    background:$primary-dark;
+    color:$border-color;
+}
+.b-footer__copyright{
+    margin:0;
+    text-align:center;
+    @include font-size(12px);
 }

@@ -49,6 +49,7 @@
 
     &:hover,
     &:focus{
-        background:darken(#e30613, 10%);
+        background:#e30613;
+        box-shadow:inset 0 0 20px rgba(darken(#e30613, 10%), .8);
     }
 }

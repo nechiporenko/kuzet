@@ -8,6 +8,39 @@
     text-align:center;
 }
 
+.f-menu__link{
+    display:inline-block;
+    padding:10px 0;
+    position:relative;
+    color:#fff;
+    text-decoration:none;
+
+    &:after{
+        content:'';
+        display:none;
+        width:25px;
+        height:1px;
+        background:$primary;
+        position:absolute;
+        left:0; bottom:0;
+        @include transition(background .15s ease-in);
+    }
+
+    &:hover,
+    &:active,
+    &.current{
+        color:$primary-alt;
+
+        &:after{
+            background:$primary-alt;
+        }
+    }
+
+    &.current{
+        cursor:default;
+    }
+}
+
 @include media($tablet){
     .f-menu{
         font-size:1px;
@@ -31,5 +64,11 @@
         line-height:normal;
         @include font-size(14px);
         vertical-align:top;
+    }
+
+    .f-menu__link{
+        &:after{
+            display:block;
+        }
     }
 }

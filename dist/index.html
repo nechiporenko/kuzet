@@ -139,7 +139,7 @@
                 <a href="index.html" class="b-header__logo">Кузет. Охранная компания</a>
 
                 <button class="b-header__btn"><i class="icon-menu"></i></button>
-                <button class="b-header__btn b-header__btn--alt"><i class="icon-phone"></i></button>
+                <button class="b-header__btn b-header__btn--alt" data-modal="#callback"><i class="icon-phone"></i></button>
                 
                 <ul class="h-service">
                     <li class="h-service__item">
@@ -155,7 +155,7 @@
                         <a href="#" class="h-service__link">Физическая охрана</a>
                     </li>
                     <li class="h-service__item">
-                        <button class="h-service__btn">Заказать звонок</button>
+                        <button class="h-service__btn" data-modal="#callback">Заказать звонок</button>
                     </li>
                 </ul>
             </div>
@@ -448,6 +448,20 @@
     </main>
     <!--/PAGE CONTENT END-->
 
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="callback">
+        <form class="modal__content">
+            <span class="g-title">Заказать обратный звонок</span>
+            <p class="g-text-center">Оставьте Ваш номер телефона, и мы свяжемся с Вами в течение часа</p>
+            <label class="g-label">Как Вас зовут?</label>
+            <input type="text" class="g-input" placeholder="Ваше имя" required />
+            <label class="g-label">Номер телефона</label>
+            <input type="text" class="g-input" placeholder="Ваш контактный телефон" required />
+            <button type="submit" class="g-btn">Жду звонка <i class="icon-right-open-big"></i></button>
+        </form>
+    </div>
+    <!--/MODAL WINDOWS END-->
+
     <!--FOOTER START-->
     <footer class="b-footer">
         <div class="b-footer__main">
@@ -554,9 +568,9 @@
         </div>
         <div class="b-footer__sole">
             <div class="g-container">
-                <span class="b-footer__copyright">
+                <p class="b-footer__copyright">
                     <i class="icon-copyright"></i>Охранная компания «Кузет Стандарт». Все права защищены
-                </span>
+                </p>
             </div>
         </div><!--/b-footer__sole-->
     </footer>
