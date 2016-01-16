@@ -39,7 +39,70 @@ jQuery(document).ready(function ($) {
     // Мобильное меню
     //---------------------------------------------------------------------------------------
     var initMobileMenu = (function () {
-        //...
+        var $menu = $('.js-mm'),
+            $btn = $('.js-mm-toggle'),
+            BREAKPOINT=992,
+            method = {};
+
+        method.showMenu = function () {
+            $btn.addClass('active');
+            $menu.addClass('active');
+            $overlay.show().bind('click', method.hideMenu);
+            $html.css('overflow', 'hidden');
+
+        }
+
+        method.hideMenu = function () {
+            $btn.removeClass('active');
+            $menu.removeClass('active');
+            $html.css('overflow', 'auto');
+            $overlay.hide().unbind('click', method.hideMenu);
+            $menu.find('a.has-menu').removeClass('active').nextAll('ul').hide();
+        }
+
+        method.checkSize = function () {
+            var winW = verge.viewportW();
+            if (winW >= BREAKPOINT) {
+                method.hideMenu();
+            }
+        }
+
+        method.showSubmenu = function (el) {
+            el.addClass('active').nextAll('ul').slideDown();
+        }
+
+        method.hideSubmenu = function (el) {
+            el.removeClass('active').nextAll('ul').slideUp();
+        }
+
+        $menu.find('li').has('ul').children('a').addClass('has-menu');//нашли заголовки суб-меню
+
+        $('.b-header__main').on('click', '.js-mm-toggle', function () {//клик по кнопке
+            if ($(this).hasClass('active')) {
+                method.hideMenu();
+            } else {
+                method.showMenu();
+            }
+        });
+
+        $menu.on('click', '.m-menu__label', function () {//закроем по клику на заголовок меню
+            method.hideMenu();
+        });
+
+        $menu.on('click', 'a.has-menu', function (e) {
+            e.preventDefault();
+            var $el = $(this);
+            if ($el.hasClass('active')) {
+                method.hideSubmenu($el);
+            } else {
+                method.showSubmenu($el);
+            }
+        });
+
+        $window.on('resize', function () {//если перешли с малого экрана на десктоп и оставили открытое меню - закроем
+            setTimeout(method.checkSize, 500);
+        });
+
     })();
 
     

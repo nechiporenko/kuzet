@@ -67,6 +67,17 @@
         outline:0;
     }
 
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+        @include transition(transform .3s ease);
+    }
+
+    &.active{
+        [class^="icon-"]:before, [class*=" icon-"]:before{
+            @include transform(rotate(-90deg));
+        }
+    }
+
     @include media($tablet){
         margin-top:29px;
     }

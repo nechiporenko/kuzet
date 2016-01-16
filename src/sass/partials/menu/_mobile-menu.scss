@@ -1,2 +1,113 @@
 ﻿@import "../../modules/_base.scss";
 /*Mobile Menu*/
+/*Mobile Menu*/
+.page__panel{
+    position:fixed;
+    @include px2rem(width, 256px);
+    height:100%;
+    top:0;
+    @include px2rem(left, -256px);
+    z-index:1200;//поверх хидера
+    overflow-x:hidden;
+    overflow-y:auto;
+    @include transition(transform .3s ease);
+    @include linear-gradient(to bottom, $primary-dark, #444);
+
+    @include media($tablet){
+        //display:none;
+    }
+
+    &.active{
+        @include transform(translateX(100%));
+    }
+}
+
+.no-csstransforms{
+    .page__panel.active{
+        left:0;
+    }
+}
+.m-menu,
+.m-submenu{
+    @extend .g-clearlist;
+}
+
+.m-submenu{
+    display:none;
+}
+
+.m-menu__item{
+    @include font-size(16px);
+}
+
+.m-submenu__item{
+    @include font-size(14px);
+}
+.m-menu__link,
+.m-submenu__link{
+    display:block;
+    border-top:1px solid #808080;
+    border-bottom:1px solid #000;
+    color:#fff;
+    text-decoration:none;
+
+    &:hover,
+    &:active,
+    &.current{
+        color:$primary-alt;
+    }
+}
+
+.m-menu__link{
+    @include px2rem(padding, 8px 12px);
+    line-height:1.2;
+    position:relative;
+
+    &.has-menu{
+        padding-right:30px;
+
+        &:after{
+            content:'\e808';
+            font-family:'fontello';
+            position:absolute;
+            right:10px;
+            @include transition(transform .3s ease);
+        }
+
+        &.active{
+            &:after{
+                @include transform(rotate(-180deg));
+            }
+        }
+    }
+}
+
+.m-submenu__link{
+    @include px2rem(padding, 10px 10px 10px 25px);
+    line-height:1.1;
+}
+
+.m-menu__label{
+    display:block;
+    @include px2rem(height, 31px);
+    @include px2rem(line-height, 31px);
+    @include px2rem(padding, 0 30px 0 12px);
+    border-bottom:1px solid #000;
+    @include font-size(16px);
+    font-family:$font-medium;
+    color:$border-color;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    cursor:pointer;
+    outline:0;
+
+    &:after{
+        content:'\e802';
+        font-family:'fontello';
+        position:absolute;
+        right:12px;
+    }
+}
+
+
+

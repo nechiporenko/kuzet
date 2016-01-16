@@ -10,7 +10,7 @@
     background: #000;
     opacity: 0.5;
     filter: alpha(opacity=50);
-    z-index:3000;
+    z-index:1100;//поверх хидера, но под панелью моб.меню
     display:none;
 }
 
@@ -35,7 +35,7 @@
     background:rgba(0,0,0,0.2);
     border-radius:10px;
     padding:8px;
-    z-index:3100;
+    z-index:1101;
 }
 
 .modal__content{

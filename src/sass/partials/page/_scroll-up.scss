@@ -5,7 +5,7 @@
     height:50px;
     line-height:50px;
     color:$primary;
-    background-color:#ddd;
+    background-color:$primary-dark;
     text-align:center;
     vertical-align:middle;
     outline:none;
@@ -21,6 +21,6 @@
 
     &:hover,
     &:active{
-        opacity:.9;
+        opacity:.7;
     }
 }
