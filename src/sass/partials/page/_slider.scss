@@ -72,3 +72,26 @@
     }
 }
 
+
+/*Clients Logo Slider*/
+.b-client{
+    margin:48px 0 24px;
+}
+.b-client__list{
+    @extend .g-clearlist;
+}
+.b-client__thumb{
+    max-width:262px;
+    margin:0 auto;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:50%;
+    }
+}
+
+.b-client__img{
+    @extend .g-img-centered;
+}

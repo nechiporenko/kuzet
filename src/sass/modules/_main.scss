@@ -52,28 +52,63 @@ html{
     color: $text-color;
 }
 
+/* Typography*/
 .page__content{
+    min-height:500px;
     @include font-size($project-font-size);
     line-height:strip-units($project-line-height/$project-font-size);
 }
 
-/* Typography*/
-h1, h2, h3, h4, h5, h6, .g-title, g-subtitle{
+.page__section{
+    padding:52px 0 48px;
+}
+
+.page__section--alt{
+    background:#f6f6f6;
+}
+
+.page__inner{
+    max-width:582px;
+    margin:0 auto;
+    padding-bottom:24px;
+}
+
+h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
   margin-top: 0;
   margin-bottom:30px;
   line-height:1.1;
   color:$title-color;
-  font-weight:400;
+  font-weight:300;
   font-family:$font-light;
 }
-.g-title{
+.g-title,
+.g-subtitle{
     display:block;
+    position:relative;
+    text-transform:uppercase;
+    text-align:center;
+
+    &:after{
+        content:'';
+        display:block;
+        width:100px;
+        height:1px;
+        background:$primary;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        margin-left:-50px;
+    }
+}
+.g-title{
+    padding-bottom:20px;
     @include font-size(22px);
 }
 
 .g-subtitle{
-    display:block;
-    @include font-size(16px);
+    margin-bottom:10px;
+    @include font-size(18px);
+    padding-bottom:10px;
 }
 
 .g-brand-color{

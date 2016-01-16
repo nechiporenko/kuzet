@@ -4,6 +4,8 @@
 // Мобильное меню
 // Кнопка скролла страницы
 // Модальное окно
+// Слайдер на главной
+// Слайдер логотипов клиентов
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -137,7 +139,65 @@ jQuery(document).ready(function ($) {
             prevText: 'Назад'
         });
     }
-    if($('.js-slider').length){initMainSlider()}
+    if ($('.js-slider').length) { initMainSlider() }
+
+    //
+    // Слайдер логотипов клиентов
+    //---------------------------------------------------------------------------------------
+    function initClientSlider() {
+        var $slider = $('.js-client-slider'),
+            getSliderSettings = function () {//будем показывать разное кол-во слайдов на разных разрешениях
+                var setting,
+                    settings1 = {
+                        maxSlides: 1,
+                    },
+                    settings2 = {
+                        maxSlides: 2,
+                    },
+                    settings3 = {
+                        maxSlides: 3,
+                    },
+                    settings4 = {
+                        maxSlides: 4,
+                    },
+                    common = {
+                        minSlides: 1,
+                        moveSlides: 1,
+                        slideWidth: 261,
+                        slideMargin: 42,
+                        pager: false,
+                        controls: false,
+                        ticker: true,
+                        speed: 60000
+                    },
+                    winW = $window.width();
+
+                if (winW < 600) {
+                    setting = $.extend(settings1, common);
+                }
+                if (winW >= 600 && winW < 900) {
+                    setting = $.extend(settings2, common);
+                }
+                if (winW >= 900 && winW < 1200) {
+                    setting = $.extend(settings3, common);
+                }
+                if (winW >= 1200) {
+                    setting = $.extend(settings4, common);
+                }
+                return setting;
+            }
+        $slider = $slider.bxSlider(getSliderSettings()); //запускаем слайдер
+
+        $window.on('resize', function () {
+            setTimeout(recalcSliderSettings, 500);
+        });
+
+        function recalcSliderSettings() {
+            $slider.reloadSlider($.extend(getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
+        }
+
+    }
+    if($('.js-client-slider').length){initClientSlider()}
 
     //
     // Если браузер не знает о плейсхолдерах в формах

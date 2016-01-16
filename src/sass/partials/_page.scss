@@ -1,8 +1,10 @@
 ﻿@import "../modules/_base.scss";
 
 @import "page/_breadcrumbs.scss";
-@import "page/_slider.scss";
-@import "page/_services.scss";
+@import "page/_slider.scss";//Слайдер на Главной странице
+@import "page/_services.scss";//Блок основных услуг (кликабельные иконки)
+@import "page/_how-we-work.scss";//Блок Как Мы Работаем на Главной
+@import "page/_features.scss";//Блок осн. услуг
 @import "page/_scroll-up.scss";
 
 
