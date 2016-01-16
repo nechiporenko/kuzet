@@ -42,6 +42,7 @@
         </div><!--/b-header__contacts-->
         <div class="b-header__menu">
             <nav class="g-container">
+                <!--DESKTOP MENU START-->
                 <ul class="h-menu js-menu">
                     <li class="h-menu__item">
                         <a href="#" class="h-menu__link">
@@ -130,6 +131,7 @@
                         </a>
                     </li>
                 </ul>
+                <!--/DESKTOP MENU END-->
             </nav>
         </div><!--/b-header__menu-->
         <div class="b-header__main">
@@ -165,23 +167,27 @@
     <main class="page__content">
         <div class="g-container">
             <!--SLIDER START-->
-            <ul class="b-slider js-slider">
-                <li class="b-slider__item">
-                    <figure class="b-slider__thumb">
-                        <img src="img/slider/slider01.jpg" class="b-slider__img" alt="Slider Picture" />
-                    </figure>
-                </li>
-                <li class="b-slider__item">
-                    <figure class="b-slider__thumb">
-                        <img src="img/slider/slider02.jpg" class="b-slider__img" alt="Slider Picture" />
-                    </figure>
-                </li>
-                <li class="b-slider__item">
-                    <figure class="b-slider__thumb">
-                        <img src="http://placehold.it/1170x384" class="b-slider__img" alt="Slider Picture" />
-                    </figure>
-                </li>
-            </ul>
+            <div class="b-slider">
+                <ul class="b-slider__list js-slider">
+                    <li class="b-slider__item">
+                        <figure class="b-slider__thumb">
+                            <img src="img/slider/slider01.jpg" class="b-slider__img" alt="Slider Picture" />
+                        </figure>
+                    </li>
+                    <li class="b-slider__item">
+                        <figure class="b-slider__thumb">
+                            <img src="img/slider/slider02.jpg" class="b-slider__img" alt="Slider Picture" />
+                        </figure>
+                    </li>
+                    <li class="b-slider__item">
+                        <figure class="b-slider__thumb">
+                            <img src="http://placehold.it/1170x384" class="b-slider__img" alt="Slider Picture" />
+                        </figure>
+                    </li>
+                </ul>
+                <span class="b-slider__arrow b-slider__arrow--prev"></span>
+                <span class="b-slider__arrow b-slider__arrow--next"></span>
+            </div>
             <!--/SLIDER END-->
 
             <!--SERVICES LIST START-->

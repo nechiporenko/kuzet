@@ -1,13 +1,12 @@
 ﻿@import "../../modules/base";
 /** BX Slider **/
 
-$controls: '../img/controls.png';
 $loader:   '../img/loader.gif';
 
 //layout
 .bx-wrapper {
 	position: relative;
-    margin:0 auto $project-line-height;
+    margin:0 auto;
 	padding: 0;
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
@@ -75,38 +74,5 @@ $loader:   '../img/loader.gif';
 	.bx-pager-item {
 		font-size: 0;
 		line-height: 0;
-	}
-}
-
-// DIRECTION CONTROLS (NEXT / PREV)
-.bx-wrapper {
-	.bx-prev {
-		left: 10px;
-		background: url($controls) no-repeat 0 -32px;
-		&:hover,
-		&:focus {
-			background-position: 0 0;
-		}
-	}
-	.bx-next {
-		right: 10px;
-		background: url($controls) no-repeat -43px -32px;
-		&:hover,
-		&:focus {
-			background-position: -43px 0;
-		}
-	}
-	.bx-controls-direction a {
-		position: absolute;
-		top: 50%;
-		margin-top: -16px;
-		outline: 0;
-		width: 32px;
-		height: 32px;
-		@include hide-text;
-		z-index: 100;
-		&.disabled {
-			display: none;
-		}
 	}
 }

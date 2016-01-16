@@ -130,7 +130,11 @@ jQuery(document).ready(function ($) {
             pager: false,
             mode: 'fade',
             pause: 8000,
-            autoHover: true
+            autoHover: true,
+            nextSelector: '.b-slider__arrow--next',
+            prevSelector: '.b-slider__arrow--prev',
+            nextText: 'Вперед',
+            prevText: 'Назад'
         });
     }
     if($('.js-slider').length){initMainSlider()}

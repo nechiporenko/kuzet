@@ -1,6 +1,10 @@
 ﻿@import "../../modules/_base.scss";
 /*Home Page Slider*/
 .b-slider{
+    position:relative;
+    margin-bottom:$project-line-height;
+}
+.b-slider__list{
     @extend .g-clearlist;
 }
 
@@ -22,3 +26,49 @@
 .b-slider__img{
     @extend .g-full-width;
 }
+
+.b-slider__arrow{
+    display:block;
+    width:22px;
+    height:52px;
+    position:absolute;
+    top:50%;
+    margin-top:-26px;
+    z-index:100;
+    opacity:.6;
+    @include transition(opacity .3s ease);
+    background-repeat:no-repeat;
+
+    &:hover,
+    &:active{
+        opacity:1;
+    }
+
+    .bx-prev,
+    .bx-next{
+        display:block;
+        width:100%;
+        height:100%;
+        @include hide-text;
+    }
+}
+
+.b-slider__arrow--prev{
+    left:10px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22svg2%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2252%22%20width%3D%2222%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata8%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%3Cdefs%20id%3D%22defs6%22%3E%3CclipPath%20id%3D%22clipPath16%22%3E%3Cpath%20id%3D%22path18%22%20d%3D%22m0%2026.474h17.174v-26.474h-17.174v26.474z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20id%3D%22g10%22%20fill%3D%22%23fff%22%20transform%3D%22matrix%282.75%200%200%20-2.9546%20-.000020130%2052%29%22%3E%3Cg%20id%3D%22g12%22%20fill%3D%22%23fff%22%20transform%3D%22matrix%28-.46582%200%200%20-.6648%208%2017.6%29%22%3E%3Cg%20id%3D%22g14%22%20fill%3D%22%23fff%22%20clip-path%3D%22url%28%23clipPath16%29%22%3E%3Cg%20id%3D%22g20%22%20fill%3D%22%23fff%22%20transform%3D%22translate%280%20.5435%29%22%3E%3Cpath%20id%3D%22path22%22%20fill%3D%22%23fff%22%20d%3D%22m0%200v2.085l12.908%2010.182c0.127%200.105%200.203%200.261%200.203%200.428%200%200.164-0.076%200.322-0.203%200.426l-12.908%2010.182v2.086c0%200.207%200.119%200.398%200.305%200.487%200.187%200.091%200.412%200.068%200.574-0.063l16.092-12.692c0.127-0.104%200.203-0.262%200.203-0.426%200-0.167-0.076-0.323-0.203-0.428l-16.092-12.694c-0.162-0.13-0.387-0.152-0.574-0.062-0.186%200.089-0.305%200.281-0.305%200.489%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+}
+
+.b-slider__arrow--next{
+    right:10px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22svg2%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2252%22%20width%3D%2222%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata8%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%3Cdefs%20id%3D%22defs6%22%3E%3CclipPath%20id%3D%22clipPath16%22%3E%3Cpath%20id%3D%22path18%22%20d%3D%22m0%2026.474h17.174v-26.474h-17.174v26.474z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20id%3D%22g10%22%20fill%3D%22%23fff%22%20transform%3D%22matrix%28-2.75%200%200%202.9546%2022%20-.00025055%29%22%3E%3Cg%20id%3D%22g12%22%20fill%3D%22%23fff%22%20transform%3D%22matrix%28-.46582%200%200%20-.6648%208%2017.6%29%22%3E%3Cg%20id%3D%22g14%22%20fill%3D%22%23fff%22%20clip-path%3D%22url%28%23clipPath16%29%22%3E%3Cg%20id%3D%22g20%22%20fill%3D%22%23fff%22%20transform%3D%22translate%280%20.5435%29%22%3E%3Cpath%20id%3D%22path22%22%20fill%3D%22%23fff%22%20d%3D%22m0%200v2.085l12.908%2010.182c0.127%200.105%200.203%200.261%200.203%200.428%200%200.164-0.076%200.322-0.203%200.426l-12.908%2010.182v2.086c0%200.207%200.119%200.398%200.305%200.487%200.187%200.091%200.412%200.068%200.574-0.063l16.092-12.692c0.127-0.104%200.203-0.262%200.203-0.426%200-0.167-0.076-0.323-0.203-0.428l-16.092-12.694c-0.162-0.13-0.387-0.152-0.574-0.062-0.186%200.089-0.305%200.281-0.305%200.489%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+}
+
+.no-svg{
+    .b-slider__arrow--prev{
+        background-image:url(../img/icons/arrow_left_wh.png);
+    }
+    .b-slider__arrow--next{
+        background-image:url(../img/icons/arrow_right_wh.png);
+    }
+}
+
