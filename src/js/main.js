@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
             $menu.removeClass('active');
             $html.css('overflow', 'auto');
             $overlay.hide().unbind('click', method.hideMenu);
-            $menu.find('.m-menu__btn').removeClass('active');
+            $menu.find('.m-menu__btn').removeClass('active'); //свернем все подменю
             $menu.find('.m-submenu').hide();
         }
 
@@ -74,7 +74,8 @@ jQuery(document).ready(function ($) {
         }
 
         method.hideSubmenu = function (el) {
-            el.removeClass('active').parent('li').children('ul').slideUp();
+            el.removeClass('active').parent('li').find('ul').slideUp();
+            el.parent('li').find('.m-menu__btn').removeClass('active'); //свернем дочерние субменю
         }
 
         //добавим кнопки для раскрытия суб-меню
@@ -92,7 +93,7 @@ jQuery(document).ready(function ($) {
             method.hideMenu();
         });
 
-        $menu.on('click', '.m-menu__btn', function () {
+        $menu.on('click', '.m-menu__btn', function () {//развернем - свернем подменю
             var $el = $(this);
             if ($el.hasClass('active')) {
                 method.hideSubmenu($el);
@@ -100,16 +101,6 @@ jQuery(document).ready(function ($) {
                 method.showSubmenu($el);
             }
         });
-
-        //$menu.on('click', 'a.has-menu', function (e) {
-        //    e.preventDefault();
-        //    var $el = $(this);
-        //    if ($el.hasClass('active')) {
-        //        method.hideSubmenu($el);
-        //    } else {
-        //        method.showSubmenu($el);
-        //    }
-        //});
 
         $window.on('resize', function () {//если перешли с малого экрана на десктоп и оставили открытое меню - закроем
             setTimeout(method.checkSize, 500);

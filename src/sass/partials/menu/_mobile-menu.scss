@@ -78,11 +78,6 @@
     top:0;
     right:0;
 
-    &:hover,
-    &:focus{
-        color:$primary-alt;
-    }
-
     [class^="icon-"]:before, [class*=" icon-"]:before{
         margin:0;
         @include transition(transform .3s ease);
@@ -121,6 +116,7 @@
 .m-submenu__link{
     @include px2rem(padding, 10px 10px 10px 25px);
     line-height:1.1;
+    font-family:$font-light;
 }
 
 

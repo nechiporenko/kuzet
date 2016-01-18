@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
   margin-bottom:30px;
   line-height:1.1;
   color:$title-color;
-  font-weight:300;
+  font-weight:normal;
   font-family:$font-light;
 }
 .g-title,
@@ -117,11 +117,11 @@ h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
 
 b, strong{
     font-family:$font-medium;
-    font-weight:500;
+    font-weight:normal;
 }
 i, em{
-    font-weight:500;
     font-family:$font-italic;
+    font-style:normal;
 }
 
 /* Links */
@@ -154,7 +154,6 @@ ol ul {
 blockquote{
     font-size:120%;
     line-height:1.6;
-    font-style: italic;
     @include px2rem(padding, 0 0 0 30px);
     border-left:2px solid $primary;
     font-family:$font-italic;

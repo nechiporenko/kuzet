@@ -26,6 +26,7 @@
 .h-submenu__link{
     display:block;
     text-decoration:none;
+    font-family:$font-light;
     &:hover,
     &:active,
     &.hover,
@@ -114,9 +115,10 @@
 
 
 .no-js{
-    .h-menu__item{
+    .h-menu__item,
+    .h-submenu__item{
         &:hover{
-            .h-submenu{
+            & > .h-submenu{
                 display:block;
             }
         }

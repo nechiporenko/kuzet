@@ -4,7 +4,7 @@
 .b-how__inner{
     max-width:840px;
     margin:0 auto;
-    @extend .g-clearfix;
+    overflow:hidden;
 }
 
 .b-how__col{
@@ -27,7 +27,50 @@
 
 .b-how__thumb{
     text-align:center;
+    position:relative;
+    z-index:1;
+
+    &:before{
+        content:'';
+        display:none;
+        width:380px;
+        height:10px;
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAMAAADxROxiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURQAAAMq+ucq+ucq+ucq+ucq+uXUoQHwAAAAGdFJOUwB/PhVXCgoSvAsAAAA6SURBVBjTrZA5DgAwDMICSf7/5UY9Zhjq2RLIEUNnWBQAaq2x0SYuaj6fyF+iPR08Xnl1nDxzk9TFF15/AG8Qagx6AAAAAElFTkSuQmCC);
+        background-repeat:repeat-x;
+        position:absolute;
+        top:60%;
+        left:50%;
+        z-index:-1;
+        @include transform(translateY(120px) rotate(45deg));
+    }
+
+    @include media($tablet){
+        &:before{
+            display:block;
+        }
+    }
 }
+
+.b-how__thumb--right{
+    &:before{
+        @include transform(translateX(-380px) translateY(120px) rotate(-41deg));
+    }
+}
+
+.b-how__thumb--last{
+    &:before{
+        display:none;
+    }
+}
+
+.no-csstransforms{
+    .b-how__thumb{
+        &:before{
+            display:none;
+        }
+    }
+}
+
 @include media($tablet){
     .b-how__row{
         display:table;
