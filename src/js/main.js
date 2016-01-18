@@ -22,7 +22,8 @@ jQuery(document).ready(function ($) {
     //---------------------------------------------------------------------------------------
     var initDesktopMenu = (function () {
         var $menu = $('.js-menu');
-        $menu.children('li').has('ul').children('a').addClass('has-menu').append('<i class="icon-down-open-mini"></i>');
+        $menu.find('li').has('ul').children('a').addClass('has-menu');
+
         $menu.find('li').on({
             mouseenter: function () {
                 $(this).find('ul:first').stop(true, true).fadeIn('fast');
