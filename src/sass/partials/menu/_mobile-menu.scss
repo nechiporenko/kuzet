@@ -13,8 +13,8 @@
     @include transition(transform .3s ease);
     @include linear-gradient(to bottom, $primary-dark, #444);
 
-    @include media($tablet){
-        //display:none;
+    @include media($desktop){
+        display:none;
     }
 
     &.active{
@@ -32,17 +32,71 @@
     @extend .g-clearlist;
 }
 
-.m-submenu{
-    display:none;
-}
-
 .m-menu__item{
     @include font-size(16px);
+
+    &.has-menu{
+        .m-menu__link{
+            margin-right:35px;
+        }
+    }
 }
 
 .m-submenu__item{
     @include font-size(14px);
+
+    &.has-menu{
+        &>.m-submenu__link{
+            margin-right:35px;
+        }
+    }
 }
+
+.m-menu__item,
+.m-submenu__item{
+    position:relative;
+}
+
+.m-menu__btn{
+    display:inline-block;
+    padding:0;
+    margin:0;
+    background:none;
+    border-top:1px solid #808080;
+    border-right:none;
+    border-bottom:1px solid #000;
+    border-left:1px solid #808080;
+    width:rem(35px);
+    height:rem(37px);
+    line-height:rem(37px);
+    box-sizing:border-box;
+    @include font-size(16px);
+    text-align:center;
+    color:$border-color;
+    outline:0;
+    position:absolute;
+    top:0;
+    right:0;
+
+    &:hover,
+    &:focus{
+        color:$primary-alt;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+        @include transition(transform .3s ease);
+    }
+
+    &.active{
+        color:$primary-alt;
+
+        [class^="icon-"]:before, [class*=" icon-"]:before{
+            @include transform(rotate(-180deg));
+        }
+    }
+}
+
 .m-menu__link,
 .m-submenu__link{
     display:block;
@@ -62,29 +116,23 @@
     @include px2rem(padding, 8px 12px);
     line-height:1.2;
     position:relative;
-
-    &.has-menu{
-        padding-right:30px;
-
-        &:after{
-            content:'\e808';
-            font-family:'fontello';
-            position:absolute;
-            right:10px;
-            @include transition(transform .3s ease);
-        }
-
-        &.active{
-            &:after{
-                @include transform(rotate(-180deg));
-            }
-        }
-    }
 }
 
 .m-submenu__link{
     @include px2rem(padding, 10px 10px 10px 25px);
     line-height:1.1;
+}
+
+
+
+.m-submenu{
+    display:none;
+
+    .m-submenu{
+        .m-submenu__link{
+            padding-left:45px;
+        }
+    }
 }
 
 .m-menu__label{
