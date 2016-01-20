@@ -7,6 +7,7 @@
 // Слайдер на главной
 // Слайдер логотипов клиентов
 // Маска для телефонного номера
+// Гармошка на странице Оплата
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -270,6 +271,38 @@ jQuery(document).ready(function ($) {
     // Маска для телефонного номера
     //---------------------------------------------------------------------------------------
     $('.js-phone').mask('+7 (999) 999 99 99');
+
+    //
+    // Гармошка на странице Оплата
+    //---------------------------------------------------------------------------------------
+    function initAccordion() {
+        var $list = $('.js-accordion'),
+            $btn = $list.find('.b-payment__row'),
+            $target = $list.find('.b-payment__inner'),
+            method = {};
+
+        method.showInner = function (el) {
+            el.addClass('active').nextAll('.b-payment__inner').slideDown();
+        }
+        method.hideInner = function (el) {
+            el.removeClass('active').nextAll('.b-payment__inner').slideUp();
+        }
+
+        //раскроем первый блок, свернем остальные
+        $target.not(':first').hide();
+        $btn.filter(':first').addClass('active');
+
+        //клик по заголовку
+        $list.on('click', '.b-payment__row', function () {
+            var $el = $(this);
+            if ($el.hasClass('active')) {
+                method.hideInner($el);
+            } else {
+                method.showInner($el);
+            }
+        });
+    }
+    if($('.js-accordion').length){initAccordion()}
 
     //
     // Если браузер не знает о плейсхолдерах в формах

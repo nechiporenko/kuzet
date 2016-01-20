@@ -88,12 +88,11 @@
 }
 
 .b-header__btn--alt{
-    background:#e30613;
+    @include linear-gradient(to bottom, lighten($primary-bright, 10%), $primary-bright);
 
     &:hover,
     &:focus{
-        background:#e30613;
-        box-shadow:inset 0 0 20px rgba(darken(#e30613, 10%), .8);
+        box-shadow:inset 0 0 20px rgba(darken($primary-bright, 12%), .8);
     }
 
     @include media($tablet){

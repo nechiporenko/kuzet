@@ -42,7 +42,12 @@
 
     &:hover,
     &:active{
-        color:#f33d09;
+        color:$primary-bright;
+    }
+
+    &.current{
+        color:$primary-bright;
+        cursor:default;
     }
 }
 

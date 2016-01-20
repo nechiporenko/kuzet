@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kuzet - Payment Page</title>
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/app.css" />       
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page">
+    <!--HEADER START-->
+    <header class="b-header">
+        <div class="b-header__contacts">
+            <div class="g-container">
+                <ul class="h-contact">
+                    <li class="h-contact__item">
+                        <span class="h-contact__text">г. Алматы </span>
+                        <a href="tel:+77013794100" class="h-contact__phone">+7 (701) 379 41 00</a>
+                        <a href="tel:+77013793600" class="h-contact__phone">+7 (701) 379 36 00</a>
+                        <a href="tel:+77012775900" class="h-contact__phone">+7 (701) 277 59 00</a>
+                    </li>
+                    <li class="h-contact__item h-contact__item--common">
+                        <span class="h-contact__text">Круглосуточно:</span>
+                        <a href="tel:+77013542362" class="h-contact__phone">+7 (701) 354 23 62</a>
+                        <a href="tel:+77013287282" class="h-contact__phone">+7 (701) 328 72 82</a>
+                    </li>
+                    <li class="h-contact__item">
+                        <span class="h-contact__text">г. Астана</span>
+                        <a href="tel:+77172343402" class="h-contact__phone">+7 (717) 234 34 02</a>
+                        <a href="tel:+77172457371" class="h-contact__phone">+7 (717) 245 73 71</a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--/b-header__contacts-->
+        <div class="b-header__menu">
+            <nav class="g-container">
+                <!--DESKTOP MENU START-->
+                <ul class="h-menu js-menu">
+                    <li class="h-menu__item">
+                        <a href="security.html" class="h-menu__link">
+                            Охрана и защита
+                        </a>
+                        <ul class="h-submenu">
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Охрана квартиры</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Охрана дома</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Защита бизнеса</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Физическая охрана</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Экипаж быстрого реагирования</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Пульт охраны</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Отдел особых поручений</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="about.html" class="h-menu__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="services.html" class="h-menu__link">
+                            Услуги
+                        </a>
+                        <ul class="h-submenu">
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Охранная сигнализация</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Тревожная сигнализация</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Пожарная сигнализация</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">СКУД</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Видеонаблюдение</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Техническое обслуживание</a>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Монтажные работы</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="catalog.html" class="h-menu__link">
+                            Каталог
+                        </a>
+                        <ul class="h-submenu">
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Видеонаблюдение</a>
+                                <ul class="h-submenu">
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">IP видеонаблюдение</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">HD-SDI видеонаблюдение</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">TVI видеонаблюдение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Охранная сигнализация</a>
+                                <ul class="h-submenu">
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Контрольная панель</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Клавиатура</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Датчики</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Типовые решения и комплекты</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">Пожарная сигнализация</a>
+                                <ul class="h-submenu">
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Контрольная панель</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Клавиатура</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Датчики</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Типовые решения и комплекты</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="h-submenu__item">
+                                <a href="#" class="h-submenu__link">СКУД</a>
+                                <ul class="h-submenu">
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Панели управления</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Контроллеры</a>
+                                    </li>
+                                    <li class="h-submenu__item">
+                                        <a href="#" class="h-submenu__link">Замки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="payment.html" class="h-menu__link current">
+                            Оплата
+                        </a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="docs.html" class="h-menu__link">
+                            Документы
+                        </a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="contacts.html" class="h-menu__link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <!--/DESKTOP MENU END-->
+            </nav>
+        </div><!--/b-header__menu-->
+        <div class="b-header__main">
+            <div class="g-container">
+                <a href="index.html" class="b-header__logo">Кузет. Охранная компания</a>
+
+                <button class="b-header__btn js-mm-toggle"><i class="icon-menu"></i></button>
+                <button class="b-header__btn b-header__btn--alt" data-modal="#callback"><i class="icon-phone"></i></button>
+                
+                <ul class="h-service">
+                    <li class="h-service__item">
+                        <a href="#" class="h-service__link">Охрана квартиры</a>
+                    </li>
+                    <li class="h-service__item">
+                        <a href="#" class="h-service__link">Охрана дома</a>
+                    </li>
+                    <li class="h-service__item">
+                        <a href="#" class="h-service__link">Защита бизнеса</a>
+                    </li>
+                    <li class="h-service__item">
+                        <a href="#" class="h-service__link">Физическая охрана</a>
+                    </li>
+                    <li class="h-service__item">
+                        <button class="h-service__btn" data-modal="#callback">Заказать звонок</button>
+                    </li>
+                </ul>
+            </div>
+        </div><!--/b-header__main-->
+    </header>
+    <!--/HEADER END-->
+
+    <!--PAGE CONTENT START-->
+    <main class="page__content">
+        <div class="g-container">
+            <figure class="page__thumb">
+                <img src="img/content/payment.jpg" class="g-max-full-width" alt="Security" />
+            </figure>
+            <!--BREADCRUMBS START-->
+            <ol class="breadcrumbs">
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="index.html" class="breadcrumbs__link breadcrumbs__link--home" itemprop="url">
+                        <span itemprop="title"><i class="icon-home"></i></span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Оплата
+                </li>
+            </ol>
+            <!--/BREADCRUMBS END-->
+        </div><!--/g-container-->
+
+        <section class="page__section">
+            <div class="g-container">
+                <header class="g-text-center">
+                    <h1 class="g-title">Оплата</h1>
+                    <p>Формы и способы оплаты</p>
+                </header>
+                <!--PAYMENT SECTION START-->
+                <div class="b-payment">
+                    <div class="b-payment__main">
+                        <span class="b-payment__title">Для физических лиц:</span>
+                        БИН — 060 440 000 400, КНП – 859
+                    </div>
+                    <ul class="b-payment__list js-accordion">
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/kazkom.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АФ АО “Казкоммерцбанк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a> (владелец карточки Казкоммерцбанк)</li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ul>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/bta.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «БТА Банк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/eurasian.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «Евразийский Банк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/aliance.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «Альянс Банк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/rbk.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «Bank RBK»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/atf.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «АТФ Банк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/temir.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «Темирбанк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/cesna.jpg" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">АО «Цеснабанк»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="b-payment__item">
+                            <div class="b-payment__row">
+                                <figure class="b-payment__thumb">
+                                    <a href="#" rel="nofollow" target="_blank">
+                                        <img src="img/banks/kuzet.png" class="b-payment__img" alt="Bank Logo" />
+                                    </a>
+                                </figure>
+                                <div class="b-payment__col">
+                                    <span class="b-payment__title">Офис ТОО «Кузет-Коргау»</span>
+                                </div>
+                            </div>
+                            <div class="b-payment__inner">
+                                <span class="b-payment__subtitle">Пункты оплаты:</span>
+                                <ol>
+                                    <li>В любом расчетно-кассовом отделении (РКО)</li>
+                                    <li>Через интернет <a href="#" rel="nofollow" target="_blank">Home-bank</a></li>
+                                </ol>
+                                <span class="b-payment__subtitle">Примечания:</span>
+                                <ol>
+                                    <li>ИИН лица на кого оформлен договор</li>
+                                    <li>В некоторых кассах могут попросить предъявить  удостоверение личности</li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="b-payment__main">
+                        <span class="b-payment__title">Для юридических лиц:</span>
+                        Оплата производится  согласно счета, выставляемому в начале каждого месяца на расчетные счета ТОО «Кузет-Коргау», указанные в Договоре
+                    </div>
+                    <!--PAYMENT DETAILS BLOCK START-->
+                    <div class="b-props">
+                        <figure class="b-props__thumb">
+                            <img src="img/banks/kuzet.png" alt="Logo" />
+                        </figure>
+                        <div class="b-props__row">
+                            <div class="g-col g-col--one-third">
+                                <span class="g-brand-color">Наши реквизиты:</span>
+                                <p>
+                                    ТОО «Кузет-Коргау»г. Алматы,<br />
+                                    ул. Богенбай батыра, 272
+                                </p>
+                                <p>
+                                    РНН 600 700 572 110<br />
+                                    БИН 060 440 000 400
+                                </p>
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <p>
+                                    ИИК  KZ62826A1KZTD2009434,<br />
+                                    БИК ALMNKZKA, Кбе  17<br />
+                                    в <a href="#" rel="nofollow" target="_blank">АО «АТФ Банк»</a>  г. Алматы
+                                </p>
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <p>
+                                    ИИК  KZ709261802150995000,<br />
+                                    БИК   KZKOKZKX<br />
+                                    в  <a href="#" rel="nofollow" target="_blank">АО «Казкоммерцбанк»</a>  г. Алматы
+                                </p>
+                            </div>
+                        </div>
+                    </div><!--/b-props-->
+                    <!--PAYMENT DETAILS BLOCK END-->
+                </div><!--/b-payment-->
+                <!--/PAYMENT SECTION END-->
+            </div><!--/g-container-->
+        </section>
+
+        <section class="page__section">
+            <div class="g-container">
+                <h2 class="g-title">Мы предлагаем</h2>
+                <!--FEATURES LIST START-->
+                <ul class="b-feature">
+                    <li class="b-feature__item">
+                        <a href="#" class="b-feature__link">
+                            <figure class="b-feature__content">
+                                <div class="b-feature__thumb">
+                                    <img src="img/content/protection-of-apartments.jpg" class="b-feature__img" alt="protection-of-apartments" />
+                                </div>
+                                <figcaption>
+                                    <span class="b-feature__title">Охрана квартиры</span>
+                                    <p>Наша компания производит установку сигнализации, сервисное обслуживание охранных систем</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="b-feature__item">
+                        <a href="#" class="b-feature__link">
+                            <figure class="b-feature__content">
+                                <div class="b-feature__thumb">
+                                    <img src="img/content/guard-house.jpg" class="b-feature__img" alt="guard-house" />
+                                </div>
+                                <figcaption>
+                                    <span class="b-feature__title">Охрана дома</span>
+                                    <p>Установив систему охраны, которая отлично впишется в интерьер Вашего коттеджа</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="b-feature__item">
+                        <a href="#" class="b-feature__link">
+                            <figure class="b-feature__content">
+                                <div class="b-feature__thumb">
+                                    <img src="img/content/business-protection.jpg" class="b-feature__img" alt="business-protection" />
+                                </div>
+                                <figcaption>
+                                    <span class="b-feature__title">Защита бизнеса</span>
+                                    <p>Мы производим монтаж систем пультовой охраны офисов, магазинов,ломбардов, пунктов обмены валюты</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="b-feature__item">
+                        <a href="#" class="b-feature__link">
+                            <figure class="b-feature__content">
+                                <div class="b-feature__thumb">
+                                    <img src="img/content/physical-security.jpg" class="b-feature__img" alt="physical-security" />
+                                </div>
+                                <figcaption>
+                                    <span class="b-feature__title">Физическая охрана</span>
+                                    <p>Наши высококвалифицированные телохранители умеют предупредить угрожающие ситуации</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+                <!--/FEATURES LIST END-->
+            </div>
+        </section>
+    </main>
+    <!--/PAGE CONTENT END-->
+
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="callback">
+        <form class="modal__content">
+            <span class="g-title">Заказать обратный звонок</span>
+            <p class="g-text-center">Оставьте Ваш номер телефона, и мы свяжемся с Вами в течение часа</p>
+            <label class="g-label">Как Вас зовут?</label>
+            <input type="text" class="g-input" placeholder="Ваше имя" required />
+            <label class="g-label">Номер телефона</label>
+            <input type="text" class="g-input js-phone" placeholder="Ваш контактный телефон" required />
+            <button type="submit" class="g-btn">Жду звонка <i class="icon-right-open-big"></i></button>
+        </form>
+    </div>
+    <!--/MODAL WINDOWS END-->
+
+    <!--MOBILE MENU START-->
+    <div class="page__panel js-mm">
+        <ul class="m-menu">
+            <li class="m-menu__item">
+                <label class="m-menu__label">Меню</label>
+            </li>
+            <li class="m-menu__item">
+                <a href="security.html" class="m-menu__link">
+                    Охрана и защита
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Охрана квартиры</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Охрана дома</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Защита бизнеса</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Физическая охрана</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Экипаж быстрого реагирования</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пульт охраны</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Отдел особых поручений</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="about.html" class="m-menu__link">
+                    О компании
+                </a>
+            </li>
+            <li class="m-menu__item">
+                <a href="services.html" class="m-menu__link">
+                    Услуги
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Охранная сигнализация</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Тревожная сигнализация</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пожарная сигнализация</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">СКУД</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Видеонаблюдение</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Техническое обслуживание</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Монтажные работы</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="catalog.html" class="m-menu__link">
+                    Каталог
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Видеонаблюдение</a>
+                        <ul class="m-submenu">
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">IP видеонаблюдение</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">HD-SDI видеонаблюдение</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">TVI видеонаблюдение</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Охранная сигнализация</a>
+                        <ul class="m-submenu">
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Контрольная панель</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Клавиатура</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Датчики</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Типовые решения и комплекты</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пожарная сигнализация</a>
+                        <ul class="m-submenu">
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Контрольная панель</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Клавиатура</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Датчики</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Типовые решения и комплекты</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">СКУД</a>
+                        <ul class="m-submenu">
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Панели управления</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Контроллеры</a>
+                            </li>
+                            <li class="m-submenu__item">
+                                <a href="#" class="m-submenu__link">Замки</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="payment.html" class="m-menu__link current">
+                    Оплата
+                </a>
+            </li>
+            <li class="m-menu__item">
+                <a href="docs.html" class="m-menu__link">
+                    Документы
+                </a>
+            </li>
+            <li class="m-menu__item">
+                <a href="contacts.html" class="m-menu__link">
+                    Контакты
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--/MOBILE MENU END-->
+
+    <!--FOOTER START-->
+    <footer class="b-footer">
+        <div class="b-footer__main">
+            <div class="g-container">
+                <div class="g-col g-col--one-half">
+                    <div class="b-footer__contact">
+                        <span class="b-footer__title">«Кузет Коргау»</span>
+                        <ul class="f-contact">
+                            <li class="f-contact__item">
+                                Адрес: Республика Казахстан,
+                            </li>
+                            <li class="f-contact__item">
+                                г. Алматы ул. Богенбай батыра, 272
+                            </li>
+                            <li class="f-contact__item">
+                                E-mail: <a href="mailto:info@kuzetkorgau.kz" class="f-contact__link">info@kuzetkorgau.kz</a>
+                            </li>
+                        </ul>
+
+                        <span class="b-footer__subtitle">Телефоны</span>
+                        <ul class="f-contact">
+                            <li class="f-contact__item">
+                                <a href="tel:+77013794100" class="f-contact__link">+ 7 (701) 379 41 00</a>
+                            </li>
+                            <li class="f-contact__item">
+                                <a href="tel:+77013793600" class="f-contact__link">+ 7 (701) 379 36 00</a>
+                            </li>
+                            <li class="f-contact__item">
+                                <a href="tel:+77012775900" class="f-contact__link">+ 7 (701) 277 59 00</a>
+                            </li>
+                        </ul>
+                    </div><!--/b-footer__contact-->
+                </div><!--/g-col-->
+                <div class="g-col g-col--one-half">
+                    <div class="b-footer__contact">
+                        <span class="b-footer__title">«Кузет Астана»</span>
+                        <ul class="f-contact">
+                            <li class="f-contact__item">
+                                Адрес: Республика Казахстан,
+                            </li>
+                            <li class="f-contact__item">
+                                г. Астана, ул. Жумабаева, 16/1, оф. 2
+                            </li>
+                            <li class="f-contact__item">
+                                E-mail: <a href="466125@mail.ru" class="f-contact__link">466125@mail.ru</a>
+                            </li>
+                        </ul>
+
+                        <span class="b-footer__subtitle">Телефоны</span>
+                        <ul class="f-contact">
+                            <li class="f-contact__item">
+                                <a href="tel:+77172343402" class="f-contact__link">+ 7 (7172) 34 34 02</a>
+                            </li>
+                            <li class="f-contact__item">
+                                <a href="tel:+77172457371" class="f-contact__link">+ 7 (7172) 45 73 71</a>
+                            </li>
+                        </ul>
+                    </div><!--/b-footer__contact-->
+                </div><!--/g-col-->
+            </div><!--/g-container-->
+        </div><!--/b-footer__main-->
+        <div class="b-footer__menu">
+            <nav class="g-container">
+                <!--FOOTER MENU START-->
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="security.html" class="f-menu__link">
+                            Охрана и защита
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="about.html" class="f-menu__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="services.html" class="f-menu__link">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="catalog.html" class="f-menu__link">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="payment.html" class="f-menu__link current">
+                            Оплата
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="docs.html" class="f-menu__link">
+                            Документы
+                        </a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="contacts.html" class="f-menu__link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <!--/FOOTER MENU END-->
+            </nav>
+        </div>
+        <div class="b-footer__sole">
+            <div class="g-container">
+                <p class="b-footer__copyright">
+                    <i class="icon-copyright"></i>Охранная компания «Кузет Стандарт». Все права защищены
+                </p>
+            </div>
+        </div><!--/b-footer__sole-->
+    </footer>
+    <!--/FOOTER END-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

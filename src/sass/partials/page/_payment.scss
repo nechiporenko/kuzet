@@ -1,0 +1,163 @@
+﻿@import "../../modules/_base.scss";
+/*Payment Section*/
+.b-payment{
+    font-family:$font-light;
+}
+
+.b-payment__main{
+    padding:20px 10px;
+    background:#f6f6f6;
+}
+.b-payment__title{
+    display:block;
+    margin:0;
+    font-family:$font-regular;
+    color:#2c2c2c;
+    @include font-size(13px);
+    text-transform:uppercase;
+}
+.b-payment__subtitle{
+    display:block;
+    margin:0;
+    @include font-size(16px);
+    font-family:$font-light;
+    color:$primary;
+}
+.b-payment__list{
+    @extend .g-clearlist;
+}
+.b-payment__item{
+    display:block;
+    padding:10px 0;
+    border-top:1px solid $border-color;
+
+    &:first-child{
+        border-top:none;
+    }
+}
+.b-payment__row{
+    overflow:hidden;
+    position:relative;
+    box-sizing:border-box;
+    padding-right:17px;
+    cursor:pointer;
+
+    &:after{
+        content:'\e808';
+        font-family:'fontello';
+        color:$primary;
+        @include font-size(18px);
+        position:absolute;
+        top:50%;
+        right:0;
+        margin-top:-15px;
+        @include transition(transform .3s ease);
+    }
+
+    &.active{
+        &:after{
+            @include transform(rotate(-180deg));
+        }
+    }
+}
+.b-payment__thumb{
+    margin:0;
+    float:left;
+    width:10.5%;
+    height:64px;
+    position:relative;
+}
+
+.b-payment__img{
+    @extend .g-img-centered;
+    @include backface-visibility(hidden);
+    @include transition(opacity .3s ease);
+
+    &:hover{
+        opacity:.75;
+    }
+}
+.b-payment__col{
+    float:left;
+    width:89.5%;
+    min-height:1px;
+    box-sizing:border-box;
+    padding:21px 0 0 5px;
+}
+
+.b-payment__inner{
+    ol,ul{
+        padding-left:0;
+        margin-top:0;
+    }
+}
+
+
+@include media($small){
+    .b-payment__title{
+        @include font-size(16px);
+    }
+
+    .b-payment__col{
+        padding:18px 0 0 10px;
+    }
+    .b-payment__inner{
+        margin-left:10.5%;
+        padding:5px 10px 0 10px;
+    }
+}
+
+@include media($large){
+    .b-payment{
+        padding:0 50px;
+    }
+    .b-payment__main{
+        padding:20px 30px;
+    }
+    .b-payment__row{
+        padding-right:70px;
+        &:after{
+            right:45px;
+        }
+    }
+    .b-payment__col,
+    .b-payment__inner{
+        padding-left:30px;
+    }   
+}
+
+/*Payments Details Section*/
+.b-props{
+    border-bottom:1px solid $border-color;
+    padding:20px 0 0;
+    @include font-size(16px);
+    @extend .g-clearfix;
+}
+.b-props__row{
+    
+}
+.b-props__thumb{
+    text-align:center;
+}
+
+@include media($tablet){
+    .b-props__thumb{
+        float:left;
+        width:10.5%;
+        margin-top:50px;
+    }
+
+    .b-props__row{
+        float:left;
+        min-height:1px;
+        width:89.5%;
+        padding-left:18px;
+        box-sizing:border-box;
+    }
+}
+
+@include media($large){
+    .b-props__row{
+        padding-left:30px;
+    }
+}
