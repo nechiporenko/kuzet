@@ -1,48 +1,51 @@
 @font-face {
-  font-family: 'HelveticaNeueCyr-Light';
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Light.eot');
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Light.woff') format('woff'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family:'HelveticaNeueCyr-Light';
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Light_directwrite.eot');
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Light_directwrite.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Light_directwrite.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Light_directwrite.ttf') format('truetype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Light_directwrite.svg#HelveticaNeueCyr-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
 }
-
 
 @font-face {
-  font-family: 'HelveticaNeueCyr-Roman';
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Roman.eot');
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Roman.woff') format('woff'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Roman.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family:'HelveticaNeueCyr-Roman';
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Roman_directwrite.eot');
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Roman_directwrite.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Roman_directwrite.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Roman_directwrite.ttf') format('truetype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Roman_directwrite.svg#HelveticaNeueCyr-Roman') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
 }
-
 
 @font-face {
-  font-family: 'HelveticaNeueCyr-Medium';
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Medium.eot');
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Medium.woff') format('woff'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family:'HelveticaNeueCyr-Medium';
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Medium_directwrite.eot');
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Medium_directwrite.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Medium_directwrite.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Medium_directwrite.ttf') format('truetype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Medium_directwrite.svg#HelveticaNeueCyr-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
 }
-
 
 @font-face {
-  font-family: 'HelveticaNeueCyr-Italic';
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Italic.eot');
-  src: url('../fonts/helvetica/HelveticaNeueCyr-Italic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Italic.woff') format('woff'),
-       url('../fonts/helvetica/HelveticaNeueCyr-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family:'HelveticaNeueCyr-Italic';
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Italic_directwrite.eot');
+	src: url('../fonts/helvetica/HelveticaNeueCyr-Italic_directwrite.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Italic_directwrite.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Italic_directwrite.ttf') format('truetype'),
+		url('../fonts/helvetica/HelveticaNeueCyr-Italic_directwrite.svg#HelveticaNeueCyr-Italic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
 }
-
-
-
-
-
-

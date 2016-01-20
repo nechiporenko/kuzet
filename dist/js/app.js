@@ -58,7 +58,7 @@ jQuery.extend(verge);
 // Слайдер на главной
 // Слайдер логотипов клиентов
 // Маска для телефонного номера
-// Гармошка на странице Оплата
+// Гармошка на страницах Оплата, Документы
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -328,15 +328,15 @@ jQuery(document).ready(function ($) {
     //---------------------------------------------------------------------------------------
     function initAccordion() {
         var $list = $('.js-accordion'),
-            $btn = $list.find('.b-payment__row'),
-            $target = $list.find('.b-payment__inner'),
+            $btn = $list.find('.b-fold__row'),
+            $target = $list.find('.b-fold__inner'),
             method = {};
 
         method.showInner = function (el) {
-            el.addClass('active').nextAll('.b-payment__inner').slideDown();
+            el.addClass('active').nextAll('.b-fold__inner').slideDown();
         }
         method.hideInner = function (el) {
-            el.removeClass('active').nextAll('.b-payment__inner').slideUp();
+            el.removeClass('active').nextAll('.b-fold__inner').slideUp();
         }
 
         //раскроем первый блок, свернем остальные
@@ -344,7 +344,7 @@ jQuery(document).ready(function ($) {
         $btn.filter(':first').addClass('active');
 
         //клик по заголовку
-        $list.on('click', '.b-payment__row', function () {
+        $list.on('click', '.b-fold__row', function () {
             var $el = $(this);
             if ($el.hasClass('active')) {
                 method.hideInner($el);

@@ -60,7 +60,6 @@ html{
 }
 
 .page__section{
-    //padding:28px 0 48px;
     padding:28px 0 42px;
 }
 
@@ -83,7 +82,7 @@ h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
   margin-bottom:30px;
   line-height:1.1;
   color:$title-color;
-  font-weight:normal;
+  font-weight:300;
   font-family:$font-light;
 }
 .g-title,
@@ -122,7 +121,7 @@ h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
 
 b, strong{
     font-family:$font-medium;
-    font-weight:normal;
+    font-weight:500;
 }
 i, em{
     font-family:$font-italic;
