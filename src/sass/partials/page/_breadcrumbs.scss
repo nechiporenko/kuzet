@@ -1,3 +1,42 @@
 ﻿@import "../../modules/_base.scss";
 /*Breadcrumbs*/
-.breadcrumbs{}
+.breadcrumbs{
+    margin:0 0 16px 0;
+    padding:0;
+    @include font-size(12px);
+    line-height:1.5;
+    list-style-type:none;
+    color:#7b7b7b;
+}
+.breadcrumbs__item{
+    display:inline-block;
+    position:relative;
+
+    &:after{
+        content:'\e80b';
+        font-family:'fontello';
+    }
+
+    &:last-child{
+        &:after{
+            display:none;
+        }
+    }
+}
+.breadcrumbs__link{
+    color:#7b7b7b;
+    text-decoration:none;
+    &:hover,
+    &:active{
+        text-decoration:underline;
+        color:$primary-alt;
+    }
+}
+
+.breadcrumbs__link--home{
+    @include font-size(18px);
+    &:hover,
+    &:active{
+        text-decoration:none;
+    }
+}
