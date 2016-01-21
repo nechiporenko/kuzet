@@ -1,0 +1,95 @@
+﻿@import "../../modules/_base.scss";
+/*Catalog List*/
+.b-catalog{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+    line-height:1;
+}
+.b-catalog__item{
+    @extend .b-feature__item;
+    box-sizing:border-box;
+    padding:10px 8px;
+    margin-bottom:24px;
+    border:1px solid $primary;
+
+    &:hover{
+        box-shadow:1px 1px 6px rgba($primary, .3);
+    }
+}
+
+.b-catalog__thumb{
+    max-width:240px;
+    margin:0 auto 15px;
+    text-align:center;
+}
+.b-catalog__wrap{
+    display:block;
+    margin-bottom:15px;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+
+    &:hover,
+    &:active{
+        .b-catalog__img{
+            opacity:.8;
+        }
+    }
+}
+
+.b-catalog__img{
+    @extend .b-feature__img;
+}
+.b-catalog__title{
+    @include font-size(16px);
+    font-family:$font-medium;
+    color:$primary;
+    text-transform:uppercase;
+    @include px2rem(letter-spacing, -.8px);
+    line-height:1.1;
+}
+.b-catalog__title-link{
+    text-decoration:none;
+    color:$primary;
+}
+
+.b-catalog__list{
+    max-width:240px;
+    margin:0 auto;
+    padding:0;
+    list-style-type:none;
+    @include font-size(16px);
+    font-family:$font-light;
+}
+
+.b-catalog__inner{
+    margin:20px 0;
+        padding-left:18px;
+        position:relative;
+
+        &:before{
+            content:'\e80f';
+            font-family:'fontello';
+            position:absolute;
+            left:0;
+            top:50%;
+            margin-top:-8px;
+            color:$primary;
+        }
+}
+
+.b-catalog__link{
+    @include px2rem(letter-spacing, -.8px);
+    color:$text-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+        text-decoration:underline;
+    }
+}
