@@ -1,0 +1,45 @@
+﻿@import "../../modules/_base.scss";
+/*Contacts Section*/
+.b-contacts{
+    @extend .g-clearfix;
+    margin-bottom:24px;
+}
+
+.b-contacts__title{
+    display:block;
+    margin-bottom:24px;
+    font-family:$font-light;
+    @include font-size(22px);
+    line-height:1.1;
+    text-transform:uppercase;
+    color:$primary;
+}
+
+.b-contacts__map{
+    margin-bottom:24px;
+    height:240px;
+
+    @include media($tablet){
+        height:312px;
+    }
+}
+
+.b-contacts__form{
+   @extend .g-col;
+   @extend .g-col--two-thirds;
+}
+
+.b-contacts__maptext{
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.b-contacts__maptitle{
+    display:block;
+    margin:0;
+    font-family:$font-light;
+    line-height:1.2;
+    @include font-size(12px);
+    text-transform:uppercase;
+    color:$primary;
+}

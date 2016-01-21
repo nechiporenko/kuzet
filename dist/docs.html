@@ -224,7 +224,7 @@
 
     <!--PAGE CONTENT START-->
     <main class="page__content">
-        <div class="g-container">
+        <div class="page__header">
             <figure class="page__thumb">
                 <img src="img/content/documents.jpg" class="g-max-full-width" alt="Documents" />
             </figure>
@@ -232,7 +232,10 @@
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <a href="index.html" class="breadcrumbs__link breadcrumbs__link--home" itemprop="url">
-                        <span itemprop="title"><i class="icon-home"></i></span>
+                        <span>
+                            <i class="icon-home"></i>
+                            <meta itemprop="title" content="Главная" />
+                        </span>
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
@@ -240,7 +243,7 @@
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
-        </div><!--/g-container-->
+        </div><!--/page__header-->
 
         <section class="page__section">
             <div class="g-container">

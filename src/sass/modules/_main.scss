@@ -59,6 +59,27 @@ html{
     line-height:strip-units($project-line-height/$project-font-size);
 }
 
+.page__header{
+    position:relative;
+}
+
+.page__header--compact{
+    padding-top:5px;
+
+    &:before{
+        content:'';
+        display:block;
+        width:100%;
+        height:1px;
+        max-width:1170px;
+        background:$border-color;
+        position:absolute;
+        top:0;
+        left:50%;
+        margin-left:-50%;
+    }
+}
+
 .page__section{
     padding:28px 0 42px;
 }

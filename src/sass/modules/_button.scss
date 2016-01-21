@@ -10,6 +10,8 @@
     @include font-size($project-font-size);
     @include px2rem(line-height, 38px);
     text-decoration: none;
+    text-transform:uppercase;
+    font-family:$font-medium;
     white-space: nowrap;
     @include linear-gradient(to bottom, lighten($primary, 10%), $primary);
     border-radius:19px;

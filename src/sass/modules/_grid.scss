@@ -1,9 +1,11 @@
 ﻿@import "base";
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.g-container {
+.g-container,
+.page__header {
     @include outer-container();
-    @include px2rem(padding, 0 10px);
+    padding-left:10px;
+    padding-right:10px;
     box-sizing:border-box;
 
     @include media($large){
