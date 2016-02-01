@@ -209,6 +209,12 @@ cite{
 
 
 /* Spacing */
+.g-spacer{
+    height:2*$project-line-height;
+    @extend .g-clearfix;
+}
+
+
 p {
   margin-top: 0; }
 

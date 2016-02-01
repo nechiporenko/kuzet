@@ -5,11 +5,20 @@
 }
 
 .b-tariff__title{
+    display:table;
+    width:100%;
+    height:78px;
     margin-bottom:20px;
     padding:12px;
     background:#f6f6f6;
     @include font-size(16px);
     text-align:center;
+    box-sizing:border-box;
+    table-layout:fixed;
+}
+.b-tariff__title-cell{
+    display:table-cell;
+    vertical-align:middle;
 }
 
 .b-tariff__subtitle{
