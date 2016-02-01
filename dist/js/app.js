@@ -83,6 +83,13 @@ jQuery.extend(verge);
     }, t(r._applyDataApi), t(window).bind("load", function (t) { r._update(!1, t) }), t(window).bind("resize orientationchange", function (t) { r._update(!0, t) })
 });
 
+/*
+ * jquery.lightbox.js v1.3
+ * https://github.com/duncanmcdougall/Responsive-Lightbox
+ * Copyright 2015 Duncan McDougall and other contributors; @license Creative Commons Attribution 2.5
+ */
+!function (a) { "use strict"; a.fn.lightbox = function (b) { var c = { margin: 50, nav: !0, blur: !0, minSize: 0 }, d = { items: [], lightbox: null, image: null, current: null, locked: !1, caption: null, init: function (b) { d.items = b; var e = "lightbox-" + Math.floor(1e5 * Math.random() + 1); d.lightbox || (d.lightbox = a("body").find(".bodyGlobalLightbox"), 0 === d.lightbox.length && (a("body").append('<div id="' + e + '" class="lightbox bodyGlobalLightbox" style="display:none;"><a href="#" class="lightbox__close lightbox__button"></a><a href="#" class="lightbox__nav lightbox__nav--prev lightbox__button"></a><a href="#" class="lightbox__nav lightbox__nav--next lightbox__button"></a><div href="#" class="lightbox__caption"><p></p></div></div>'), d.lightbox = a("#" + e)), d.caption = a(".lightbox__caption", d.lightbox)), d.items.length > 1 && c.nav ? a(".lightbox__nav", d.lightbox).show() : a(".lightbox__nav", d.lightbox).hide(), d.bindEvents() }, loadImage: function () { c.blur && a("body").addClass("blurred"), a("img", d.lightbox).remove(), d.lightbox.fadeIn("fast").append('<span class="lightbox__loading"></span>'); var b = a('<img src="' + a(d.current).attr("href") + '" draggable="false">'); a(b).load(function () { a(".lightbox__loading").remove(), d.lightbox.append(b), d.image = a("img", d.lightbox).hide(), d.resizeImage(), d.setCaption() }) }, setCaption: function () { var b = a(d.current).data("caption"); b && b.length > 0 ? (d.caption.fadeIn(), a("p", d.caption).text(b)) : d.caption.hide() }, resizeImage: function () { var b, e, f, g, h; e = a(window).height() - c.margin, f = a(window).outerWidth(!0) - c.margin, d.image.width("").height(""), g = d.image.height(), h = d.image.width(), h > f && (b = f / h, h = f, g = Math.round(g * b)), g > e && (b = e / g, g = e, h = Math.round(h * b)), d.image.width(h).height(g).css({ top: (a(window).height() - d.image.outerHeight()) / 2 + "px", left: (a(window).width() - d.image.outerWidth()) / 2 + "px" }).show(), d.locked = !1 }, getCurrentIndex: function () { return a.inArray(d.current, d.items) }, next: function () { return d.locked ? !1 : (d.locked = !0, void (d.getCurrentIndex() >= d.items.length - 1 ? a(d.items[0]).click() : a(d.items[d.getCurrentIndex() + 1]).click())) }, previous: function () { return d.locked ? !1 : (d.locked = !0, void (d.getCurrentIndex() <= 0 ? a(d.items[d.items.length - 1]).click() : a(d.items[d.getCurrentIndex() - 1]).click())) }, bindEvents: function () { a(d.items).click(function (b) { if (!d.lightbox.is(":visible") && (a(window).width() < c.minSize || a(window).height() < c.minSize)) return void a(this).attr("target", "_blank"); var e = a(this)[0]; b.preventDefault(), d.current = e, d.loadImage(), a(document).on("keydown", function (a) { 27 === a.keyCode && d.close(), 39 === a.keyCode && d.next(), 37 === a.keyCode && d.previous() }) }), d.lightbox.on("click", function (a) { this === a.target && d.close() }), a(d.lightbox).on("click", ".lightbox__nav--prev", function () { return d.previous(), !1 }), a(d.lightbox).on("click", ".lightbox__nav--next", function () { return d.next(), !1 }), a(d.lightbox).on("click", ".lightbox__close", function () { return d.close(), !1 }), a(window).resize(function () { d.image && d.resizeImage() }) }, close: function () { a(document).off("keydown"), a(d.lightbox).fadeOut("fast"), a("body").removeClass("blurred") } }; a.extend(c, b), d.init(this) } }(jQuery);
+
 // Application Scripts:
 
 // Десктоп меню (выпадайки)
@@ -94,6 +101,8 @@ jQuery.extend(verge);
 // Маска для телефонного номера
 // Гармошка на страницах Оплата, Документы
 // Автовыравнивание блоков по высоте
+// Галерея изображений
+// Вкладки на странице
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -395,6 +404,55 @@ jQuery(document).ready(function ($) {
     //---------------------------------------------------------------------------------------
     $('.js-autoheight').matchHeight({});
 
+    //
+    // Галерея изображений
+    //---------------------------------------------------------------------------------------
+    $('.js-gallery').lightbox({ blur: false });
+
+    //
+    // Вкладки на странице
+    //---------------------------------------------------------------------------------------
+    function initTabs() {
+        //старт - спрячем лишние вкладки, оставим текущую (по умолчанию - первую)
+        var $tabs = $('.js-tabs');
+        $('.b-tabs__content').hide();
+        $tabs.each(function () {
+            var $current = $(this).find('a.current');
+            if (!$current.length) { $(this).find('a:first').addClass('current'); }
+            var target = $(this).find('a.current').attr('href');
+            $(target).show();
+        });
+
+        //клик по вкладкам
+        $tabs.on('click', 'a[href^="#"]', function (e) {
+            e.preventDefault();
+            var $btn = $(this).parents('ul').find('a');
+            var tab_next = $(this).attr('href');
+            var tab_current = $btn.filter('.current').attr('href');
+            $(tab_current).hide();
+            $btn.removeClass('current');
+            $(this).addClass('current');
+            $(tab_next).fadeIn();
+            history.pushState(null, null, window.location.search + $(this).attr('href'));
+            return false;
+        });
+
+        //Откроем нужную вкладку по ссылке
+        var wantedTag = window.location.hash;
+        if (wantedTag != "") {
+            try {
+                var $allTabs = $tabs.find("a[href^=" + wantedTag + "]").parents('ul').find('a');
+                var defaultTab = $allTabs.filter('.current').attr('href');
+                $(defaultTab).hide();
+                $allTabs.removeClass('current');
+                $tabs.find("a[href^=" + wantedTag + "]").addClass('current');
+                $("#" + wantedTag.replace('#', '')).show();
+            } catch (e) {
+                // 
+            }
+        }
+    }
+    if ($('.js-tabs').length) { initTabs() }
 
     //
     // Если браузер не знает о плейсхолдерах в формах
@@ -423,6 +481,11 @@ jQuery(document).ready(function ($) {
                 }
             });
         });
+    }
+
+    if ($html.hasClass('lt-ie9')) {
+        $('.b-feature__item:nth-child(4n+1)').css('margin-left', 0);
+        $('.b-catalog__item:nth-child(4n+1)').css('margin-left', 0);
     }
     
 });

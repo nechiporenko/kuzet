@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kuzet - Catalog Page</title>
+    <title>Kuzet - Service Order Page1</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -45,12 +45,12 @@
                 <!--DESKTOP MENU START-->
                 <ul class="h-menu js-menu">
                     <li class="h-menu__item">
-                        <a href="security.html" class="h-menu__link">
+                        <a href="security.html" class="h-menu__link current">
                             Охрана и защита
                         </a>
                         <ul class="h-submenu">
                             <li class="h-submenu__item">
-                                <a href="#" class="h-submenu__link">Охрана квартиры</a>
+                                <a href="#" class="h-submenu__link current">Охрана квартиры</a>
                             </li>
                             <li class="h-submenu__item">
                                 <a href="#" class="h-submenu__link">Охрана дома</a>
@@ -106,7 +106,7 @@
                         </ul>
                     </li>
                     <li class="h-menu__item">
-                        <a href="catalog.html" class="h-menu__link current">
+                        <a href="catalog.html" class="h-menu__link">
                             Каталог
                         </a>
                         <ul class="h-submenu">
@@ -202,7 +202,7 @@
                 
                 <ul class="h-service">
                     <li class="h-service__item">
-                        <a href="#" class="h-service__link">Охрана квартиры</a>
+                        <a href="#" class="h-service__link current">Охрана квартиры</a>
                     </li>
                     <li class="h-service__item">
                         <a href="#" class="h-service__link">Охрана дома</a>
@@ -224,7 +224,22 @@
 
     <!--PAGE CONTENT START-->
     <main class="page__content">
-        <div class="page__header page__header--compact">
+        <div class="page__header">
+            <!--ORDER FORM START-->
+            <div class="page__order" style="background-image:url(img/content/page-header1.jpg)">
+                <form class="b-order">
+                    <span class="b-order__title">Охрана квартиры</span>
+                    <label class="g-visuallyhidden">Ваше имя</label>
+                    <input type="text" class="b-order__input" placeholder="Введите Ваше имя*" required />
+                    <label class="g-visuallyhidden">Ваш телефон</label>
+                    <input type="text" class="b-order__input js-phone" placeholder="Введите Ваш телефон*" required />
+                    <label class="g-visuallyhidden">Ваш email</label>
+                    <input type="email" class="b-order__input" placeholder="Введите Ваш email*" required />
+                    <button type="submit" class="b-order__btn">Отправить заявку</button>
+                </form>
+            </div>
+            <!--/ORDER FORM END-->
+            
             <!--BREADCRUMBS START-->
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -235,119 +250,136 @@
                         </span>
                     </a>
                 </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="security.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title">Охрана и защита</span>
+                    </a>
+                </li>
                 <li class="breadcrumbs__item">
-                    Каталог
+                    Охрана квартиры
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
-
-            <!--CATALOG LIST START-->
-            <ul class="b-catalog">
-                <li class="b-catalog__item js-autoheight">
-                    <figure class="b-catalog__thumb">
-                        <a href="catalog-inner.html" class="b-catalog__wrap">
-                            <img src="img/content/catalog01.jpg" class="b-catalog__img" alt="Catalog" />
-                        </a>
-                        <figcaption class="b-catalog__title" data-match-height>
-                            <a href="catalog-inner.html" class="b-catalog__title-link">Видеонаблюдение</a>
-                        </figcaption>
-                    </figure>
-                    <ul class="b-catalog__list">
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">IP-видеонаблюдение</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">HD-SDI-видеонаблюдение</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">TVI-видеонаблюдение</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="b-catalog__item js-autoheight">
-                    <figure class="b-catalog__thumb">
-                        <a href="catalog-inner.html" class="b-catalog__wrap">
-                            <img src="img/content/catalog02.jpg" class="b-catalog__img" alt="Catalog" />
-                        </a>
-                        <figcaption class="b-catalog__title" data-match-height>
-                            <a href="catalog-inner.html" class="b-catalog__title-link">Охранная сигнализация</a>
-                        </figcaption>
-                    </figure>
-                    <ul class="b-catalog__list">
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Контрольная панель</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Клавиатура</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Датчики</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Типовые решения и комплекты</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="b-catalog__item js-autoheight">
-                    <figure class="b-catalog__thumb">
-                        <a href="catalog-inner.html" class="b-catalog__wrap">
-                            <img src="img/content/catalog03.jpg" class="b-catalog__img" alt="Catalog" />
-                        </a>
-                        <figcaption class="b-catalog__title" data-match-height>
-                            <a href="catalog-inner.html" class="b-catalog__title-link">Пожарная сигнализация</a>
-                        </figcaption>
-                    </figure>
-                    <ul class="b-catalog__list">
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Контрольная панель</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Клавиатура</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Датчики</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Типовые решения и комплекты</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="b-catalog__item js-autoheight">
-                    <figure class="b-catalog__thumb">
-                        <a href="catalog-inner.html" class="b-catalog__wrap">
-                            <img src="img/content/catalog04.jpg" class="b-catalog__img" alt="Catalog" />
-                        </a>
-                        <figcaption class="b-catalog__title" data-match-height>
-                            <a href="catalog-inner.html" class="b-catalog__title-link">Скуд</a>
-                        </figcaption>
-                    </figure>
-                    <ul class="b-catalog__list">
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Панели управления</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Контроллеры</a>
-                        </li>
-                        <li class="b-catalog__inner">
-                            <a href="catalog-inner.html" class="b-catalog__link">Замки</a>
-                        </li>
-                    </ul>
-                </li>                
-            </ul>
-            <!--/CATALOG LIST END-->
         </div><!--/page__header-->
 
         <article class="page__section">
             <div class="g-container">
-                <h1 class="g-title">Каталог продукции</h1>
-                <p>Компания Кузет-Коргау – оператор профессиональных систем безопасности для квартир, домов и объектов коммерческой недвижимости. Компания предоставляет охранные услуги в г.Алматы и г.Астана с 2006г.  и предлагает современные охранные системы и технологии защиты: охрана квартир, домов, офисов.  Мы представляем системы безопасности: беспроводная охранная сигнализация, проводная охранная сигнализация, тревожная сигнализация, пожарная сигнализация, системы видео наблюдения, системы контроля доступа.</p>
-                <p>Компания Кузет-Коргау – оператор профессиональных систем безопасности для квартир, домов и объектов коммерческой недвижимости. Компания предоставляет охранные услуги в г.Алматы и г.Астана с 2006г.  и предлагает современные охранные системы и технологии защиты: охрана квартир, домов, офисов.  Мы представляем системы безопасности: беспроводная охранная сигнализация, проводная охранная сигнализация, тревожная сигнализация, пожарная сигнализация, системы видео наблюдения, системы контроля доступа. Каждая из предлагаемых нами охранных систем имеет свои преимущества, проста в использовании и имеет широкий спектр дополнительных возможностей. Важной составляющей нашей деятельности является оказание услуги ГБР Кузет в Алматы и Астана.</p>
-            </div>
-        </article>
+                <h1 class="g-title">Охранный мониторинг квартир</h1>
+
+                <!--PAGE TABS START-->
+                <ul class="b-tabs js-tabs">
+                    <li class="b-tabs__item">
+                        <a href="#tab1" class="b-tabs__link">Тариф «Бюджет»</a>
+                    </li>
+                    <li class="b-tabs__item">
+                        <a href="#tab2" class="b-tabs__link">Тариф «Стандарт»</a>
+                    </li>
+                </ul>
+
+                <div class="b-tabs__content" id="tab1">
+                    <div class="b-tariff">
+                        <div class="b-tariff__title">
+                            ОХРАННАЯ СИГНАЛИЗАЦИЯ <span class="g-bright-color">5 000</span> тенге/месяц
+                            <br />
+                            Блокировка входной группы Вашей квартиры
+                        </div>
+                        <span class="b-tariff__subtitle">В стоимость услуги охранного мониторинга входит:</span>
+                        <div class="b-tariff__content">
+                            <ul>
+                                <li>Защита от проникновения в Вашу квартиру</li>
+                                <li>Ночной режим</li>
+                                <li>Реагирование экипажей КУЗЕТ по тревоге до 8 минут</li>
+                                <li>Круглосуточный технический сервис</li>
+                                <li>Материальная ответственность до 350000 тенге</li>
+                            </ul>
+                        </div>
+                    </div><!--/b-tariff-->
+                    <div class="b-tariff">
+                        <div class="b-tariff__title">
+                            ОХРАННО-ТРЕВОЖНАЯ СИГНАЛИЗАЦИЯ <span class="g-bright-color">6 000</span> тенге/месяц
+                            <br />
+                            Блокировка входной группы Вашей квартиры + тревожная кнопка или брелок
+                        </div>
+                        <span class="b-tariff__subtitle">В стоимость услуги охранного мониторинга входит:</span>
+                        <div class="b-tariff__content">
+                            <ul>
+                                <li>Защита от проникновения в Вашу квартиру</li>
+                                <li>Ночной режим</li>
+                                <li>Тревожная кнопка или брелок для защиты от чрезвычайных ситуаций</li>
+                                <li>Реагирование экипажей КУЗЕТ по тревоге до 8 минут</li>
+                                <li>Круглосуточный технический сервис</li>
+                                <li>Материальная ответственность до 350000 тенге</li>
+                            </ul>
+                        </div>
+                    </div><!--/b-tariff-->
+                    <div class="b-tariff">
+                        <div class="b-tariff__title">
+                            ТРЕВОЖНАЯ СИГНАЛИЗАЦИЯ <span class="g-bright-color">5 000</span> тенге/месяц
+                            <br />
+                            В Вашей квартире тревожная сигнализация
+                        </div>
+                        <span class="b-tariff__subtitle">В стоимость услуги охранного мониторинга входит:</span>
+                        <div class="b-tariff__content">
+                            <ul>
+                                <li>Тревожная кнопка или брелок для защиты от чрезвычайных ситуаций</li>
+                                <li>Реагирование экипажей КУЗЕТ по тревоге до 8 минут</li>
+                                <li>Круглосуточный технический сервис</li>
+                            </ul>
+                        </div>
+                    </div><!--/b-tariff-->
+
+                    <div class="b-tariff">
+                        <div class="b-tariff__set js-autoheight">
+                            <span class="b-tariff__legend" data-match-height>Охранная сигнализация</span>
+                            <div class="b-tariff__description">
+                                <p>Согласно Договору на централизованное наблюдение будет осуществляться круглосуточный мониторинг за состоянием системы охранной сигнализации. При поступлении тревожного сигнала на ПЦН (Пульт центрального наблюдения) Кузет-Стандарт с охраняемого объекта, он передается в Дежурную часть, откуда транслируется
+                                в экипажи ГБР (Группы быстрого реагирования). Ближайшие экипажи ГБР направляются на указанный объект для предотвращения кражи или нападения.</p>
+                            </div>
+                        </div>
+                        <div class="b-tariff__set js-autoheight">
+                            <span class="b-tariff__legend" data-match-height>Клиентам компании Кузет-Стандарт круглосуточно предоставлено:</span>
+                            <div class="b-tariff__description">
+                                <ul>
+                                    <li>Техническая поддержка сервисной службы</li>
+                                    <li>Выезд Группы быстрого реагирования</li>
+                                    <li>Вызов служб МЧС</li>
+                                    <li>Физическая охрана при инциденте</li>
+                                    <li>СМС оповещение о событиях на объекте</li>
+                                    <li>Выезд дежурного представителя компании при инциденте</li>
+                                    <li>Вызов сотрудников МВД</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--/b-tariff-->
+                </div><!--/b-tabs__content #tab1-->
+                <div class="b-tabs__content" id="tab2">
+                    <div class="b-tariff">
+                        <div class="b-tariff__title">
+                            ТРЕВОЖНАЯ СИГНАЛИЗАЦИЯ <span class="g-bright-color">5 000</span> тенге/месяц
+                            <br />
+                            В Вашей квартире тревожная сигнализация
+                        </div>
+                        <span class="b-tariff__subtitle">В стоимость услуги охранного мониторинга входит:</span>
+                        <div class="b-tariff__content">
+                            <p>Контент вкладки ...</p>
+                        </div>
+                    </div><!--/b-tariff-->
+                </div><!--/b-tabs__content #tab2-->
+                <!--/PAGE TABS END-->
+                
+                <h2 class="g-subtitle g-subtitle--alt">
+                    Стоимость абонентской платы
+                    <br />
+                    за охранный мониторинг
+                </h2>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+            </div><!--/g-container-->
+        </article><!--/page__section-->
 
         <section class="page__section">
             <div class="g-container">
-                <h2 class="g-title">Мы предлагаем</h2>
+                <h3 class="g-title">Мы предлагаем</h3>
                 <!--FEATURES LIST START-->
                 <ul class="b-feature">
                     <li class="b-feature__item">
@@ -430,12 +462,12 @@
                 <label class="m-menu__label">Меню</label>
             </li>
             <li class="m-menu__item">
-                <a href="security.html" class="m-menu__link">
+                <a href="security.html" class="m-menu__link current">
                     Охрана и защита
                 </a>
                 <ul class="m-submenu">
                     <li class="m-submenu__item">
-                        <a href="#" class="m-submenu__link">Охрана квартиры</a>
+                        <a href="#" class="m-submenu__link current">Охрана квартиры</a>
                     </li>
                     <li class="m-submenu__item">
                         <a href="#" class="m-submenu__link">Охрана дома</a>
@@ -491,7 +523,7 @@
                 </ul>
             </li>
             <li class="m-menu__item">
-                <a href="catalog.html" class="m-menu__link current">
+                <a href="catalog.html" class="m-menu__link">
                     Каталог
                 </a>
                 <ul class="m-submenu">
@@ -644,7 +676,7 @@
                 <!--FOOTER MENU START-->
                 <ul class="f-menu">
                     <li class="f-menu__item">
-                        <a href="security.html" class="f-menu__link">
+                        <a href="security.html" class="f-menu__link current">
                             Охрана и защита
                         </a>
                     </li>
@@ -659,7 +691,7 @@
                         </a>
                     </li>
                     <li class="f-menu__item">
-                        <a href="catalog.html" class="f-menu__link current">
+                        <a href="catalog.html" class="f-menu__link">
                             Каталог
                         </a>
                     </li>

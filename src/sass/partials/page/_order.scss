@@ -1,0 +1,56 @@
+﻿@import "../../modules/_base.scss";
+/*Order Section*/
+.page__order{
+    height:312px;
+    margin-bottom:5px;
+    background-position:center top;
+    background-repeat:no-repeat;
+    @extend .g-clearfix;
+}
+
+.b-order{
+    height:312px;
+    margin:0 auto;
+    max-width:340px;
+    padding:25px 15px 0;
+    line-height:1;
+    background:#fff;
+    background:rgba(#fff, .8);
+    text-align:center;
+    box-sizing:border-box;
+
+    @include media($small){
+        margin:0 20px 0 0;
+        float:right;
+    }
+}
+
+.b-order__title{
+    display:block;
+    margin-bottom:20px;
+    @include font-size(30px);
+    font-family:$font-medium;
+    white-space:nowrap;
+    color:#403f3f;
+}
+
+.b-order__input{
+    @extend .g-input;
+    margin-bottom:15px;
+    @include px2rem(height, 44px);
+    @include font-size(16px);
+    border-radius:10px;
+
+    &:hover,
+    &:focus{
+        border-color:$primary-alt;
+    }
+}
+
+.b-order__btn{
+    @extend .g-btn;
+    @extend .g-btn--alt;
+    margin-bottom:0;
+    @include px2rem(height, 44px);
+    @include px2rem(line-height, 44px);
+}

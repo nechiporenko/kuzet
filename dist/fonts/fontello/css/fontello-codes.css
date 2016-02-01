@@ -17,4 +17,6 @@
 .icon-right-small:before { content: '\e80f'; } /* '' */
 .icon-doc-text:before { content: '\e810'; } /* '' */
 .icon-file-archive:before { content: '\e811'; } /* '' */
+.icon-circle:before { content: '\e812'; } /* '' */
+.icon-circle-thin:before { content: '\e813'; } /* '' */
 .icon-copyright:before { content: '\e815'; } /* '' */

@@ -37,6 +37,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "130380e481a7defc690dfb24123a1f0c",
+      "css": "circle",
+      "code": 59410,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5774d0a0e50f6eefc8be01bd761e5dd3",
+      "css": "circle-thin",
+      "code": 59411,
+      "src": "fontawesome"
+    },
+    {
       "uid": "4a74a0f87d4089efe7aba1825bff4193",
       "css": "copyright",
       "code": 59413,

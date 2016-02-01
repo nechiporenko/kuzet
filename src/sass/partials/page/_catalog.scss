@@ -44,14 +44,19 @@
 .b-catalog__img{
     @extend .b-feature__img;
 }
-.b-catalog__title{
+.b-catalog__title,
+.b-catalog__subtitle{
     @include font-size(16px);
     font-family:$font-medium;
     color:$primary;
-    text-transform:uppercase;
     @include px2rem(letter-spacing, -.8px);
     line-height:1.1;
 }
+
+.b-catalog__title{
+    text-transform:uppercase;
+}
+
 .b-catalog__title-link{
     text-decoration:none;
     color:$primary;
@@ -91,5 +96,24 @@
     &:active{
         color:$primary;
         text-decoration:underline;
+    }
+}
+
+.b-catalog__description{
+    margin-bottom:15px;
+    @include font-size(16px);
+    color:#767676;
+    line-height:1.375;
+}
+
+.b-catalog__short-link{
+    display:block;
+    margin-bottom:8px;
+    @include font-size(12px);
+    color:#767676;
+
+    &:hover,
+    &:active{
+        color:$primary;
     }
 }

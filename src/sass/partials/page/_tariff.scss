@@ -1,0 +1,113 @@
+﻿@import "../../modules/_base.scss";
+/*Tariff Section*/
+.b-tariff{
+    @extend .g-clearfix;
+}
+
+.b-tariff__title{
+    margin-bottom:20px;
+    padding:12px;
+    background:#f6f6f6;
+    @include font-size(16px);
+    text-align:center;
+}
+
+.b-tariff__subtitle{
+    display:block;
+    margin-bottom:20px;
+    @include font-size(14px);
+    text-transform:uppercase;
+    text-align:center;
+    color:$primary;
+    font-family:$font-light;
+    line-height:1.1;
+}
+
+.b-tariff__content{
+    max-width:500px;
+    margin:0 auto;
+    font-family:$font-light;
+
+    ul{
+        list-style-type:none;
+        padding:0;
+
+        li{
+            margin-bottom:14px;
+            &:before{
+                content:'';
+                display:inline-block;
+                margin-right:24px;
+                width:17px;
+                height:20px;
+                vertical-align:middle;
+                background:url(../img/shield.svg) no-repeat;
+            }
+        }
+    }
+
+}
+
+.no-svg{
+    .b-tariff__content{
+        ul{
+            li{
+                &:before{
+                    background:url(../img/shield.png) no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.b-tariff__set{
+    float:left;
+    width:100%;
+    padding:0 20px 20px;
+    margin-top:15px;
+    margin-bottom:50px;
+    min-height:1px;
+    box-sizing:border-box;
+    border:1px solid $primary;
+
+    @include media($tablet){
+        width:47%;
+        margin-left:6%;
+
+        &:first-child{
+            margin-left:0;
+        }
+    }
+}
+
+.b-tariff__legend{
+    display:inline-block;
+    max-width:380px;
+    padding:5px 20px;
+    @include transform(translateY(-17px));
+    background:#fff;
+    @include font-size(16px);
+    font-family:$font-light;
+    color:$primary;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    line-height:1.5;
+}
+
+.b-tariff__description{
+    ul{
+        list-style-type:none;
+        padding:0;
+
+        li{
+            &:before{
+                content:'\e803';
+                display:inline-block;
+                vertical-align:middle;
+                margin-right:20px;
+                font-family:'fontello';
+                color:$primary;
+            }
+        }
+    }
+}
