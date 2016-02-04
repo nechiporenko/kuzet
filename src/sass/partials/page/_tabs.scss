@@ -14,8 +14,12 @@
 }
 
 .b-tabs__item{
-    display:inline-block;
+    display:block;
     @include font-size(14px);
+
+    @include media($small){
+        display:inline-block;
+    }
 }
 .b-tabs__link{
     display:inline-block;
