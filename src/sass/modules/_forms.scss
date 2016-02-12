@@ -37,6 +37,16 @@ textarea {
         border-color:$primary;
         outline:0;
     }
+
+    &:disabled{
+        border-color:$border-color;
+        box-shadow:inset 0 0 6px rgba($border-color, .8);
+    }
+
+    &.error{
+        border-color:red;
+        box-shadow:inset 0 0 6px rgba(red, .8);
+    }
 }
 
 .g-input,
@@ -51,6 +61,10 @@ textarea {
 .g-label{
     display: block;
     @include px2rem(margin-bottom, $project-line-height/4);
+
+    &.error{
+        color:red;
+    }
 }
 .g-label__body{
     display: inline-block;
